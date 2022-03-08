@@ -1,0 +1,24 @@
+// RWD
+@mixin pad {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// 標題造型
+@mixin clip($size: 1rem) {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - #{$size}),
+    calc(50% + #{$size}) calc(100% - #{$size}),
+    50% 100%,
+    calc(50% - #{$size}) calc(100% - #{$size}),
+    0% calc(100% - #{$size})
+  );
+}

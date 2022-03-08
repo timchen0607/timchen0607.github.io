@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "IcoFont";
+  font-weight: normal;
+  font-style: "Regular";
+  src: url("../fonts/icofont.woff2") format("woff2"),
+    url("../fonts/icofont.woff") format("woff");
+}
+[class*=" icofont-"],
+[class^="icofont-"] {
+  font-family: IcoFont !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  line-height: 1;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.icofont-code-alt:before {
+  content: "\ede6";
+}
+
+.icofont-bank:before {
+  content: "\e962";
+}
+
+.icofont-hat-alt:before {
+  content: "\eade";
+}
+
+.icofont-paper:before {
+  content: "\eae5";
+}
+
+.icofont-bag-alt:before {
+  content: "\eeab";
+}
+
+.icofont-email:before {
+  content: "\ef12";
+}
+
+.icofont-line-messenger:before {
+  content: "\ed4b";
+}

@@ -1,12 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>陳政丰 - Tim Chen's Personal Website.</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/global.min.css" />
   </head>
   <body>
-    <h1>Tim</h1>
+    <section class="banner">
+      <div class="container">
+        <h1>I'm Tim Chen</h1>
+      </div>
+    </section>
+    <section class="profile">
+      <h2 class="title">個人資料<span>PROFILE</span></h2>
+      <div class="content">
+        <div class="profile_content">
+          <div class="profile_content-image">
+            <h3 class="profile_content-name">陳政丰</h3>
+            <p>Nothing is Fun Until You Are Good at It.</p>
+          </div>
+          <div class="profile_content-text">
+            <div class="profile_content-intro">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+                eos, voluptatum nulla culpa magni eius maiores optio fuga
+                commodi magnam. Explicabo quidem velit esse? Omnis earum
+                consequatur necessitatibus cumque aperiam?
+              </p>
+              <p>
+                Voluptatem quis nesciunt quod provident aliquid quo mollitia
+                cumque, dolores voluptates sed, in dolor dignissimos veritatis
+                labore sequi, adipisci exercitationem vero soluta recusandae?
+                Laborum culpa eius, adipisci cum similique consectetur.
+              </p>
+            </div>
+            <div class="profile_content-info">
+              <ol>
+                <li>Email：</li>
+                <li>Line</li>
+                <li>Line Bot</li>
+                <li></li>
+                <li></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <ul class="services_content container">
+        <li class="services_content-item">
+          <i class="icofont-code-alt"></i>
+          WEB DEVELOPER
+        </li>
+        <li class="services_content-item">
+          <i class="icofont-bank"></i>Fintech
+        </li>
+      </ul>
+    </section>
+    <section class="portfolio">
+      <h2 class="title">作品集<span>PORTFOLIO</span></h2>
+      <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+          <div class="swiper-slide box">
+            <img class="box_image" src="./images/ComingSoon.png" />
+            <h3 class="box_title">Coming Soon</h3>
+            <p class="box_text">Coming Soon</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <section class="experience">
+      <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
+      <ul class="container timeline">
+        <li class="timeline-item">
+          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
+          <h3 class="timeline-title">助理工程師</h3>
+          <h4 class="timeline-subTitle">眾點資訊有限公司</h4>
+          <p class="timeline-text">Oct 2021 - Jun 2022</p>
+          <p class="timeline-text">負責開發公司商品購物網站。</p>
+          <p class="timeline-text">協助維護與重構公司原有路跑活動報名系統。</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
+          <h3 class="timeline-title">獨自接案－<br />在地保養品購物網站</h3>
+          <h4 class="timeline-subTitle">康仕儷保養品</h4>
+          <p class="timeline-text">Jul 2020 - Jan 2021</p>
+          <p class="timeline-text">
+            替該公司開發保養品購物網站前後台，取代原先表單。
+          </p>
+          <p class="timeline-text">
+            該網站亦整合其合作店家的進貨表單，並提供優惠積點機制。
+          </p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
+          <h3 class="timeline-title">校園授權軟體授權專區</h3>
+          <h4 class="timeline-subTitle">國立虎尾科技大學</h4>
+          <p class="timeline-text">Jun 2016 - Jan 2020</p>
+          <p class="timeline-text">
+            協助開發校園授權軟體下載專區，取代舊版介面。
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="blog">
+      <h2 class="title">部落格<span>　BLOG　</span></h2>
+    </section>
+    <section class="eduction">
+      <h2 class="title">學歷<span>EDUCTION</span></h2>
+      <ul class="container timeline">
+        <li class="timeline-item">
+          <div class="timeline-icon"><i class="icofont-hat-alt"></i></div>
+          <h3 class="timeline-title">國立虎尾科技大學</h3>
+          <h4 class="timeline-subTitle">資訊管理系 碩士學位</h4>
+          <p class="timeline-text">Sep 2020 - Jun 2022</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-icon"><i class="icofont-hat-alt"></i></div>
+          <h3 class="timeline-title">國立虎尾科技大學</h3>
+          <h4 class="timeline-subTitle">資訊管理系 學士學位</h4>
+          <p class="timeline-text">Sep 2016 - Jun 2020</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <div class="skills_container">
+        <h2 class="title title_light">
+          技能
+          <span class="title_light_en">SKILLS</span>
+        </h2>
+        <ul class="skills_content">
+          <li>Vue2 / 3</li>
+          <li>CSS3 / SCSS</li>
+          <li>JavaScript(ES6+)</li>
+          <li>HTML5 / RWD</li>
+          <li>Git / Github</li>
+          <li>jQuery / Bootstrap</li>
+          <li>ASP.NET Core</li>
+          <li>Line Bot</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="contact"></footer>
+
+    <!-- <footer class="contact">
+      <div class="contact_container">
+        <h2 class="title title_light">
+          聯絡方式<span class="title_light_en">CONTACT METHOD</span>
+        </h2>
+        <ul class="contact_content">
+          <li>
+            <a href="mailto:a0963573232@gmail.com" class="contact_content_item">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/tim.chen.37051"
+              class="contact_content_item"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://line.me/ti/p/kw6N40kdgT"
+              class="contact_content_item"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              <i class="fab fa-line"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codepen.io/timchen0607"
+              class="contact_content_item"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              <i class="fab fa-codepen"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/@timchen0607"
+              class="contact_content_item"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              <i class="fab fa-medium"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer> -->
+
+    <i class="icofont-paper"></i>
+    <i class="icofont-email"></i>
+    <i class="icofont-line-messenger"></i>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let portfolioSwiper = new Swiper(".swiper-container", {
+        centeredSlides: true,
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        loopedSlides: 5,
+        loop: true,
+        autoplay: true,
+      });
+    </script>
   </body>
 </html>
