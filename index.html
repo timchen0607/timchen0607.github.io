@@ -83,7 +83,11 @@
                     <div class="ico"><i class="icofont-code-alt"></i></div>
                   </template>
                   <div class="portfolioCnt-link">
-                    <a class="portfolioCnt-linkBtn" :href="item.url">
+                    <a
+                      class="portfolioCnt-linkBtn"
+                      :href="item.url"
+                      target="_blank"
+                    >
                       <i class="icofont-link-alt"></i>
                     </a>
                   </div>
@@ -91,7 +95,14 @@
                 </div>
                 <h4 class="portfolioCnt-subTitle" x-text="item.subTitle"></h4>
                 <p class="portfolioCnt-dateTime" x-text="item.dateTime"></p>
-                <p class="portfolioCnt-skill" x-text="item.skill"></p>
+                <div class="portfolioCnt-skills">
+                  <template x-for="skill in item.skill.split('|')">
+                    <span
+                      :class="'portfolioCnt-skill portfolioCnt-skill-' + skill.replace(' ','')"
+                      x-text="skill"
+                    ></span>
+                  </template>
+                </div>
                 <p class="portfolioCnt-decs" x-text="item.decs"></p>
               </div>
             </template>

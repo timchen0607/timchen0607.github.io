@@ -329,8 +329,39 @@ body {
     font-weight: bold;
     letter-spacing: 0.25rem;
   }
+  &-skills {
+    display: flex;
+  }
+  &-skill {
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    color: $c_light;
+    font-size: 0.5rem;
+    background-color: $c_main;
+    border-radius: 0.75rem;
+    &-Vue3 {
+      background-color: #42b883;
+    }
+    &-Vue2 {
+      background-color: #33475b;
+    }
+    &-Canvas {
+      background-color: #00c4cc;
+    }
+    &-SCSS {
+      background-color: #cf649a;
+    }
+    &-JavaScript {
+      background-color: #efd81d;
+    }
+    &-Firebase {
+      background-color: #ffa713;
+    }
+    &-HTML {
+      background-color: #de4b25;
+    }
+  }
   &-dateTime,
-  &-skill,
   &-decs {
     color: $c_gray_dark;
     font-size: 0.8rem;

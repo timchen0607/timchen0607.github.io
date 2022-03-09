@@ -4,7 +4,7 @@
     "title": "Travel-Guide",
     "subTitle": "台灣旅遊景點導覽",
     "dateTime": "2021-11-04",
-    "skill": "Vue3|Vue Router|SCSS",
+    "skill": "Vue 3|Vue Router|SCSS",
     "decs": "使用 Vue 3 Composition API建置，資料來源為介接 TDX 運輸資料 API。",
     "url": "https://timchen0607.github.io/Travel-Guide/"
   },
@@ -40,7 +40,7 @@
     "title": "Task-Manager",
     "subTitle": "任務管理工具",
     "dateTime": "2021-05-21",
-    "skill": "Vue3|Vue Draggable|SCSS",
+    "skill": "Vue 3|Vue Draggable|SCSS",
     "decs": "練習 Vue 3 Composition API 時撰寫的小工具，搭配 Vue Draggable 的拖曳功能。",
     "url": "https://timchen0607.github.io/Task-Manager/Task"
   },
