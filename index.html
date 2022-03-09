@@ -75,13 +75,19 @@
           <div class="portfolioCnt">
             <template x-for="item in portfolio">
               <div class="portfolioCnt-item">
-                <h3 class="portfolioCnt-subTitle" x-text="item.title"></h3>
+                <div class="portfolioCnt-image">
+                  <template x-if="item.image">
+                    <img :src="item.image" :alt="item.title" />
+                  </template>
+                  <template x-if="!item.image">
+                    <i class="icofont-code-alt"></i>
+                  </template>
+                </div>
+                <p class="portfolioCnt-url" x-text="item.url"></p>
                 <h4 class="portfolioCnt-subTitle" x-text="item.subTitle"></h4>
                 <p class="portfolioCnt-dateTime" x-text="item.dateTime"></p>
                 <p class="portfolioCnt-skill" x-text="item.skill"></p>
                 <p class="portfolioCnt-decs" x-text="item.decs"></p>
-                <p class="portfolioCnt-url" x-text="item.url"></p>
-                <p class="portfolioCnt-image" x-text="item.image"></p>
               </div>
             </template>
           </div>
