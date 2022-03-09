@@ -261,15 +261,72 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+  padding: 2rem 0;
   &-item {
     width: 30%;
+    margin: 0.5rem 0;
     padding: 0.5rem;
     border: 1px solid $c_gray;
+    &:hover .portfolioCnt-link {
+      z-index: 0;
+    }
+    &:hover .portfolioCnt-title {
+      background-color: $c_light;
+    }
+  }
+  &-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    padding-bottom: 0.5rem;
+    > img,
+    > .ico {
+      width: 100%;
+      height: 100%;
+      object-position: center center;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      background-color: $c_gray_light;
+    }
+  }
+  &-link {
+    position: absolute;
+    top: 0;
+    bottom: 2.25rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff33;
+    z-index: -1;
+    &Btn {
+      padding: 1rem;
+      color: $c_light;
+      background-color: #00000033;
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      &:hover {
+        color: $c_main;
+      }
+    }
+  }
+  &-title {
+    padding: 0.25rem 0;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #ffffff99;
+    transform: translateY(-95%);
+    transition: background-color 0.5s;
   }
   &-subTitle {
+    padding-bottom: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
-    line-height: 2.5rem;
     letter-spacing: 0.25rem;
   }
   &-dateTime,

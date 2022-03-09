@@ -80,10 +80,15 @@
                     <img :src="item.image" :alt="item.title" />
                   </template>
                   <template x-if="!item.image">
-                    <i class="icofont-code-alt"></i>
+                    <div class="ico"><i class="icofont-code-alt"></i></div>
                   </template>
+                  <div class="portfolioCnt-link">
+                    <a class="portfolioCnt-linkBtn" :href="item.url">
+                      <i class="icofont-link-alt"></i>
+                    </a>
+                  </div>
+                  <h4 class="portfolioCnt-title" x-text="item.title"></h4>
                 </div>
-                <p class="portfolioCnt-url" x-text="item.url"></p>
                 <h4 class="portfolioCnt-subTitle" x-text="item.subTitle"></h4>
                 <p class="portfolioCnt-dateTime" x-text="item.dateTime"></p>
                 <p class="portfolioCnt-skill" x-text="item.skill"></p>
