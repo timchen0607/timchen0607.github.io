@@ -1,0 +1,74 @@
+[
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Travel-Guide",
+    "subText": "台灣旅遊景點導覽",
+    "dateTime": "2021-11-04",
+    "skill": "使用 Vue 3 Composition API建置，資料來源為介接 TDX 運輸資料 API。",
+    "description": "Vue3|Vue Router|SCSS",
+    "url": "https://timchen0607.github.io/Travel-Guide/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Watermark",
+    "subText": "證件浮水印工具",
+    "dateTime": "2021-01-29",
+    "skill": "Canvas|JavaScript",
+    "description": "練習 Canvas 時寫的小工具，可用來為證件照加上浮水印與灰階。",
+    "url": "https://timchen0607.github.io/Watermark/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Campus-Web",
+    "subText": "校園討論版",
+    "dateTime": "2021-08-05",
+    "skill": "Vue 3|Firebase|NativeScript-Vue",
+    "description": "嘗試使用 Vue Cli 與 Firebase 建置即時討論版，另嘗試透過 NativeScript-Vue 開發跨平台應用程式。",
+    "url": "https://timchen0607.github.io/Campus/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Art-Activities",
+    "subText": "藝文活動查詢網",
+    "dateTime": "2021-05-29",
+    "skill": "Vue 3|Vue Router",
+    "description": "嘗試使用 Vue Cli 與 Vue Router 開發網站，並練習實作資料串接與篩選。",
+    "url": "https://timchen0607.github.io/Art-Activities/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Task-Manager",
+    "subText": "任務管理工具",
+    "dateTime": "2021-05-21",
+    "skill": "Vue3|Vue Draggable|SCSS",
+    "description": "練習 Vue 3 Composition API 時撰寫的小工具，搭配 Vue Draggable 的拖曳功能。",
+    "url": "https://timchen0607.github.io/Task-Manager/Task"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "BMI-Calculator",
+    "subText": "計算 BMI 小工具",
+    "dateTime": "2020-06-10",
+    "skill": "JavaScript|SCSS",
+    "description": "練習 JavaScript 時寫的小工具。",
+    "url": "https://timchen0607.github.io/BMI-Calculator/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "Gentleman-Glasses",
+    "subText": "形象官網切版",
+    "dateTime": "2020-12-04",
+    "skill": "RWD|HTML|SCSS",
+    "description": "初期切版練習用作品，主題為眼鏡廠商形象網站。",
+    "url": "https://timchen0607.github.io/Gentleman-Glasses/"
+  },
+  {
+    "image": "https://i.imgur.com/PGS6wTD.jpeg",
+    "title": "NROU",
+    "subText": "國立赤鬼科技大學(偽入口網站)",
+    "dateTime": "2019-12-01",
+    "skill": "RWD|HTML|SCSS",
+    "description": "初期切版練習用作品，仿照校園入口網站進行切版練習。",
+    "url": "https://timchen0607.github.io/NROU/"
+  }
+]

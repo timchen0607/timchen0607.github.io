@@ -205,6 +205,21 @@ body {
     }
   }
   &-info {
+    color: $c_light;
+    line-height: 1.5rem;
+    & > li > span {
+      letter-spacing: 0.2rem;
+    }
+    & > li:nth-child(2) > span {
+      letter-spacing: 0.4rem;
+    }
+    & > li > a {
+      color: $c_light;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     &::before {
       background-color: $c_dark;
     }

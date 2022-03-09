@@ -41,15 +41,20 @@
                 Laborum culpa eius, adipisci cum similique consectetur.
               </p>
             </div>
-            <div class="profile_content-info">
-              <ol>
-                <li>Email：</li>
-                <li>Line</li>
-                <li>Line Bot</li>
-                <li></li>
-                <li></li>
-              </ol>
-            </div>
+            <ol class="profile_content-info">
+              <li>
+                <i class="icofont-email"></i>
+                <span>Email：</span>
+                <a href="mailto:zousheng0607@gmail.com">
+                  zousheng0607@gmail.com
+                </a>
+              </li>
+              <li>
+                <i class="icofont-line-messenger"></i>
+                <span>Line：</span>
+                <a href="">timchen0607</a>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -67,55 +72,22 @@
     </section>
     <section class="portfolio">
       <h2 class="title">作品集<span>PORTFOLIO</span></h2>
-      <!-- <div class="swiper-container">
+      <div class="swiper portfolio_content">
         <div class="swiper-wrapper">
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
-          <div class="swiper-slide box">
-            <img class="box_image" src="./images/ComingSoon.png" />
-            <h3 class="box_title">Coming Soon</h3>
-            <p class="box_text">Coming Soon</p>
-          </div>
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
         </div>
-      </div> -->
+      </div>
+    </section>
+    <section class="skills">
+      <h2 class="title">專業技能<span>　SKILLS　</span></h2>
     </section>
     <section class="experience">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
@@ -151,8 +123,8 @@
         </li>
       </ul>
     </section>
-    <section class="blog">
-      <h2 class="title">部落格<span>　BLOG　</span></h2>
+    <section class="certificate">
+      <h2 class="title">證照<span>CERTIFICATE</span></h2>
     </section>
     <section class="eduction">
       <h2 class="title">學歷<span>EDUCTION</span></h2>
@@ -170,6 +142,9 @@
           <p class="timeline-text">Sep 2016 - Jun 2020</p>
         </li>
       </ul>
+    </section>
+    <section class="blog">
+      <h2 class="title">部落格<span>　BLOG　</span></h2>
     </section>
 
     <section class="skills">
@@ -249,18 +224,20 @@
     </footer> -->
 
     <i class="icofont-paper"></i>
-    <i class="icofont-email"></i>
-    <i class="icofont-line-messenger"></i>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      let portfolioSwiper = new Swiper(".swiper-container", {
+      new Swiper(".portfolio_content", {
         centeredSlides: true,
+        // slidesPerView: "auto",
         spaceBetween: 30,
-        slidesPerView: "auto",
+        slidesPerView: 3,
+        slidesPerGroup: 3,
         loopedSlides: 5,
         loop: true,
+        loopFillGroupWithBlank: true,
         autoplay: true,
+        speed: 3000,
       });
     </script>
   </body>
