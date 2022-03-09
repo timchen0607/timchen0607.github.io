@@ -149,17 +149,28 @@
     </section>
     <section class="certificate">
       <h2 class="title">證照<span>CERTIFICATE</span></h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+      <div class="certificate-bg">
+        <div class="container">
+          <div>
+            <div class="swiper certificate-list">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="swiper certificate-list">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -263,25 +274,6 @@
     <i class="icofont-paper"></i>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      document.addEventListener("alpine:init", () => {
-        Alpine.data("xData", () => ({
-          init() {
-            this.portfolio = [];
-            this.fetchPortfolio();
-          },
-          fetchPortfolio() {
-            fetch("https://timchen0607.github.io/api/portfolio.json")
-              .then((res) => res.json())
-              .then((json) => (this.portfolio = json));
-          },
-        }));
-      });
-
-      new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
