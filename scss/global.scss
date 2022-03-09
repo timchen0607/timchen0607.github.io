@@ -26,6 +26,7 @@ body {
   text-align: center;
   letter-spacing: 0.5rem;
   background-color: $c_gray;
+  user-select: none;
   z-index: 1;
   @include clip(1.2rem);
   &::before,
@@ -151,7 +152,7 @@ body {
   }
 }
 
-.profile_content {
+.profileCnt {
   display: flex;
   transform: translateY(-1.2rem);
   box-sizing: border-box;
@@ -252,6 +253,18 @@ body {
     width: 100%;
     height: 1.2rem;
     background-color: $c_gray_light;
+  }
+}
+
+.portfolioCnt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  &-item {
+    width: 30%;
+    padding: 0.5rem;
+    border: 1px solid $c_gray;
   }
 }
 

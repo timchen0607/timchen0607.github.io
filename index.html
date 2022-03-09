@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./css/global.min.css" />
   </head>
-  <body>
+  <body x-data="xData">
     <section class="banner">
       <div class="container">
         <h1>I'm Tim Chen</h1>
@@ -20,42 +20,40 @@
     </section>
     <section class="profile">
       <h2 class="title">個人資料<span>PROFILE</span></h2>
-      <div class="content">
-        <div class="profile_content">
-          <div class="profile_content-image">
-            <h3 class="profile_content-name">陳政丰</h3>
-            <p>Nothing is Fun Until You Are Good at It.</p>
+      <div class="profileCnt">
+        <div class="profileCnt-image">
+          <h3 class="profileCnt-name">陳政丰</h3>
+          <p>Nothing is Fun Until You Are Good at It.</p>
+        </div>
+        <div class="profileCnt-text">
+          <div class="profileCnt-intro">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+              eos, voluptatum nulla culpa magni eius maiores optio fuga commodi
+              magnam. Explicabo quidem velit esse? Omnis earum consequatur
+              necessitatibus cumque aperiam?
+            </p>
+            <p>
+              Voluptatem quis nesciunt quod provident aliquid quo mollitia
+              cumque, dolores voluptates sed, in dolor dignissimos veritatis
+              labore sequi, adipisci exercitationem vero soluta recusandae?
+              Laborum culpa eius, adipisci cum similique consectetur.
+            </p>
           </div>
-          <div class="profile_content-text">
-            <div class="profile_content-intro">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
-                eos, voluptatum nulla culpa magni eius maiores optio fuga
-                commodi magnam. Explicabo quidem velit esse? Omnis earum
-                consequatur necessitatibus cumque aperiam?
-              </p>
-              <p>
-                Voluptatem quis nesciunt quod provident aliquid quo mollitia
-                cumque, dolores voluptates sed, in dolor dignissimos veritatis
-                labore sequi, adipisci exercitationem vero soluta recusandae?
-                Laborum culpa eius, adipisci cum similique consectetur.
-              </p>
-            </div>
-            <ol class="profile_content-info">
-              <li>
-                <i class="icofont-email"></i>
-                <span>Email：</span>
-                <a href="mailto:zousheng0607@gmail.com">
-                  zousheng0607@gmail.com
-                </a>
-              </li>
-              <li>
-                <i class="icofont-line-messenger"></i>
-                <span>Line：</span>
-                <a href="">timchen0607</a>
-              </li>
-            </ol>
-          </div>
+          <ol class="profileCnt-info">
+            <li>
+              <i class="icofont-email"></i>
+              <span>Email：</span>
+              <a href="mailto:zousheng0607@gmail.com">
+                zousheng0607@gmail.com
+              </a>
+            </li>
+            <li>
+              <i class="icofont-line-messenger"></i>
+              <span>Line：</span>
+              <a href="">timchen0607</a>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
@@ -72,18 +70,22 @@
     </section>
     <section class="portfolio">
       <h2 class="title">作品集<span>PORTFOLIO</span></h2>
-      <div class="swiper portfolio_content">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-        </div>
+      <div class="container">
+        <template x-if="portfolio">
+          <div class="portfolioCnt">
+            <template x-for="item in portfolio">
+              <div class="portfolioCnt-item">
+                <h3 class="portfolioCnt-subTitle" x-text="item.title"></h3>
+                <h4 class="portfolioCnt-subTitle" x-text="item.subTitle"></h4>
+                <p class="portfolioCnt-dateTime" x-text="item.dateTime"></p>
+                <p class="portfolioCnt-skill" x-text="item.skill"></p>
+                <p class="portfolioCnt-decs" x-text="item.decs"></p>
+                <p class="portfolioCnt-url" x-text="item.url"></p>
+                <p class="portfolioCnt-image" x-text="item.image"></p>
+              </div>
+            </template>
+          </div>
+        </template>
       </div>
     </section>
     <section class="skills">
@@ -237,34 +239,23 @@
     </footer> -->
 
     <i class="icofont-paper"></i>
-
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      fetch("https://timchen0607.github.io/api/portfolio.json")
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-        });
-      // Alpine.data("dropdown", () => ({
-      //   init() {
-      //     console.log(
-      //       'I will get evaluated when initializing each "dropdown" component.'
-      //     );
-      //   },
-      // }));
-      new Swiper(".portfolio_content", {
-        centeredSlides: true,
-        // slidesPerView: "auto",
-        spaceBetween: 30,
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        loopedSlides: 5,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoplay: true,
-        speed: 5000,
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("xData", () => ({
+          init() {
+            this.portfolio = [];
+            this.fetchPortfolio();
+          },
+          fetchPortfolio() {
+            fetch("https://timchen0607.github.io/api/portfolio.json")
+              .then((res) => res.json())
+              .then((json) => (this.portfolio = json));
+          },
+        }));
       });
+
       new Swiper(".mySwiper", {
         effect: "cards",
         grabCursor: true,
