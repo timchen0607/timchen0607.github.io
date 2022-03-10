@@ -8,6 +8,7 @@ body {
   color: $c_dark;
   font-size: 18px;
   font-family: $font;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -42,7 +43,7 @@ body {
     @include clip(1.2rem);
   }
   &::after {
-    background: #ffffff33;
+    background: $c_light_trans3;
   }
   > span {
     position: absolute;
@@ -163,7 +164,7 @@ body {
     flex-direction: column-reverse;
     padding: 1.2rem;
     background-color: $c_dark;
-    background: linear-gradient(to right, #ffffff99, #ffffff99),
+    background: linear-gradient(to right, $c_light_trans9, $c_light_trans9),
       url(../images/profile.png) no-repeat center center / cover;
     > * {
       width: 100%;
@@ -202,7 +203,7 @@ body {
   }
   &-intro {
     &::before {
-      background-color: $c_gray_light;
+      background-color: $c_sub;
     }
   }
   &-info {
@@ -268,10 +269,10 @@ body {
     margin: 0.5rem 0;
     padding: 0.5rem;
     border: 1px solid $c_gray;
-    &:hover .portfolioCnt-link {
+    &:hover .portfolio-link {
       z-index: 0;
     }
-    &:hover .portfolioCnt-title {
+    &:hover .portfolio-title {
       background-color: $c_light;
     }
   }
@@ -296,18 +297,18 @@ body {
   &-link {
     position: absolute;
     top: 0;
-    bottom: 2.25rem;
+    bottom: 2.2rem;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff33;
+    background-color: $c_light_trans3;
     z-index: -1;
     &Btn {
       padding: 1rem;
       color: $c_light;
-      background-color: #00000033;
+      background-color: $c_dark_trans4;
       font-size: 1.5rem;
       text-decoration: none;
       border-radius: 0.5rem;
@@ -320,7 +321,7 @@ body {
     padding: 0.25rem 0;
     font-size: 1.25rem;
     text-align: center;
-    background-color: #ffffff99;
+    background-color: $c_light_trans9;
     transform: translateY(-95%);
     transition: background-color 0.5s;
   }
@@ -381,22 +382,13 @@ body {
     position: relative;
     width: 100%;
     padding: 3rem 0;
-    background: url("../images/certificate-bg.png") top center / cover;
+    background: linear-gradient(
+        to right,
+        $c_dark_trans2 50%,
+        $c_dark_trans4 50%
+      ),
+      url("../images/certificate-bg.png") top center / cover;
     background-attachment: fixed;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 50%;
-      height: inherit;
-      background-color: #00000022;
-    }
-    &::after {
-      right: 0;
-      background-color: #00000044;
-    }
     > .container {
       display: flex;
       justify-content: space-around;
@@ -427,7 +419,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 3rem;
-    background-color: #00000066;
+    background-color: $c_dark_trans4;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.5s;
@@ -446,7 +438,8 @@ body {
 
 .contact {
   position: relative;
-  background-color: $c_dark;
+  background: linear-gradient(to right, $c_dark_trans2 50%, $c_dark_trans4 50%),
+    $c_dark;
   &_title {
     position: relative;
     width: 150px;
