@@ -14,10 +14,25 @@
     <link rel="stylesheet" href="./css/global.min.css" />
   </head>
   <body x-data="xData">
-    <section id="top" class="banner">
-      <div class="container">
-        <h1>I'm Tim Chen</h1>
-        <i class="icofont-scroll-double-down"></i>
+    <section id="top" class="top">
+      <nav>
+        <div class="container"></div>
+      </nav>
+      <div>
+        <div class="top_mouse">
+          <div class="top_mouseIn"></div>
+        </div>
+        <span class="top_arrow"></span>
+        <span class="top_arrow"></span>
+        <span class="top_arrow"></span>
+      </div>
+    </section>
+    <section class="banner"></section>
+    <section class="banner_text">
+      <p class="banner_text-sign">WHO I AM</p>
+      <div>
+        <h1 class="banner_text-title">I'm Tim Chen</h1>
+        <p class="banner_text-subTitle">Tim's Personal Website.</p>
       </div>
     </section>
     <section id="profile">
@@ -89,7 +104,7 @@
         </li>
       </ul>
     </section>
-    <section id="portfolio">
+    <section id="portfolio" class="cover">
       <h2 class="title">作品集<span>PORTFOLIO</span></h2>
       <div class="container">
         <template x-if="portfolio">
@@ -145,7 +160,7 @@
         <li>Python</li>
       </ul>
     </section> -->
-    <section id="experience">
+    <section id="experience" class="cover">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
       <ul class="container timeline">
         <li class="timeline-item">
@@ -179,7 +194,7 @@
         </li>
       </ul>
     </section>
-    <section id="certificate" class="certificate">
+    <section id="certificate" class="certificate cover">
       <h2 class="title">證照<span>CERTIFICATE</span></h2>
       <div class="certificate-bg">
         <div class="container">
@@ -234,7 +249,7 @@
         </div>
       </template>
     </section>
-    <section id="eduction">
+    <section id="eduction" class="cover">
       <h2 class="title">學歷<span>EDUCTION</span></h2>
       <ul class="container timeline">
         <li class="timeline-item">
