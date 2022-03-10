@@ -112,6 +112,17 @@
     </section>
     <section class="skills">
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
+      <!-- <ul class="skills_content">
+        <li>Vue2 / 3</li>
+        <li>CSS3 / SCSS</li>
+        <li>JavaScript(ES6+)</li>
+        <li>HTML5 / RWD</li>
+        <li>Git / Github</li>
+        <li>jQuery / Bootstrap</li>
+        <li>ASP.NET Core</li>
+        <li>Line Bot</li>
+        <li>Python</li>
+      </ul> -->
     </section>
     <section class="experience">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
@@ -147,33 +158,54 @@
         </li>
       </ul>
     </section>
-    <section class="certificate">
+    <section class="certificate" id="cert">
       <h2 class="title">證照<span>CERTIFICATE</span></h2>
       <div class="certificate-bg">
         <div class="container">
-          <div>
-            <div class="swiper certificate-list">
+          <template x-if="finCert">
+            <div class="swiper certSwiper certificate-finance">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
+                <template x-for="item in finCert">
+                  <div class="swiper-slide">
+                    <a :href="'#'+item.title" class="certificate-item">
+                      <img :src="item.image" :alt="item.title" />
+                    </a>
+                  </div>
+                </template>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="swiper certificate-list">
+          </template>
+          <template x-if="techCert">
+            <div class="swiper certSwiper certificate-technology">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
+                <template x-for="item in techCert">
+                  <div class="swiper-slide">
+                    <a :href="'#'+item.title" class="certificate-item">
+                      <img :src="item.image" :alt="item.title" />
+                    </a>
+                  </div>
+                </template>
               </div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
+      <template x-if="finCert">
+        <div>
+          <template x-for="item in finCert">
+            <a href="#cert" class="certificate-lightbox" :id="item.title">
+              <img :src="item.image" :alt="item.title" />
+            </a>
+          </template>
+          <template x-for="item in techCert">
+            <a href="#cert" class="certificate-lightbox" :id="item.title">
+              <img :src="item.image" :alt="item.title" />
+            </a>
+          </template>
+        </div>
+      </template>
     </section>
+
     <section class="eduction">
       <h2 class="title">學歷<span>EDUCTION</span></h2>
       <ul class="container timeline">
@@ -195,25 +227,6 @@
       <h2 class="title">部落格<span>　BLOG　</span></h2>
     </section>
 
-    <section class="skills">
-      <div class="skills_container">
-        <h2 class="title title_light">
-          技能
-          <span class="title_light_en">SKILLS</span>
-        </h2>
-        <ul class="skills_content">
-          <li>Vue2 / 3</li>
-          <li>CSS3 / SCSS</li>
-          <li>JavaScript(ES6+)</li>
-          <li>HTML5 / RWD</li>
-          <li>Git / Github</li>
-          <li>jQuery / Bootstrap</li>
-          <li>ASP.NET Core</li>
-          <li>Line Bot</li>
-          <li>Python</li>
-        </ul>
-      </div>
-    </section>
     <footer class="contact"></footer>
 
     <!-- <footer class="contact">

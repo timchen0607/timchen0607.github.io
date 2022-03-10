@@ -2,6 +2,8 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("xData", () => ({
     init() {
       this.portfolio = [];
+      this.finCert = [];
+      this.techCert = [];
       this.fetchPortfolio();
       this.fetchCertificate();
       this.skillsParallax();
@@ -12,10 +14,18 @@ document.addEventListener("alpine:init", () => {
         .then((json) => (this.portfolio = json));
     },
     fetchCertificate() {
-      new Swiper(".certificate-list", {
-        effect: "cards",
-        grabCursor: true,
-      });
+      fetch("https://timchen0607.github.io/api/certificate.json")
+        .then((res) => res.json())
+        .then((json) => {
+          this.finCert = json.finance;
+          this.techCert = json.technology;
+        })
+        .then(() => {
+          new Swiper(".certSwiper", {
+            effect: "cards",
+            grabCursor: true,
+          });
+        });
     },
     skillsParallax() {
       this.$el.onscroll = function myFunction() {

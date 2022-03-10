@@ -368,6 +368,7 @@ body {
     line-height: 1.2rem;
   }
 }
+
 .certificate {
   & > .title {
     transform: translateY(1.25rem);
@@ -375,7 +376,7 @@ body {
   &-bg {
     position: relative;
     width: 100%;
-    height: 60vh;
+    padding: 3rem 0;
     background: url("../images/certificate-bg.png") top center / cover;
     background-attachment: fixed;
     &::before,
@@ -383,13 +384,14 @@ body {
       content: "";
       position: absolute;
       top: 0;
+      bottom: 0;
       width: 50%;
       height: inherit;
-      background-color: #00000033;
+      background-color: #00000022;
     }
     &::after {
       right: 0;
-      background-color: #00000066;
+      background-color: #00000044;
     }
     > .container {
       display: flex;
@@ -397,8 +399,43 @@ body {
       align-items: center;
     }
   }
-  &-list {
-    width: 240px;
-    height: 320px;
+  &-finance {
+    width: 300px;
+    height: 400px;
+  }
+  &-technology {
+    width: 400px;
+    height: 300px;
+  }
+  &-item > img {
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    object-fit: contain;
+  }
+  &-lightbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #00000066;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-position: center center;
+      object-fit: contain;
+    }
+    &:target {
+      z-index: 2;
+      opacity: 1;
+    }
   }
 }
