@@ -145,14 +145,14 @@ body {
     content: "";
     position: absolute;
     top: 0;
+    bottom: -1.25rem;
     left: 50%;
     width: 1px;
-    height: 100%;
     background-color: $c_gray;
   }
 }
 
-.profileCnt {
+.profile {
   display: flex;
   transform: translateY(-1.2rem);
   box-sizing: border-box;
@@ -209,10 +209,11 @@ body {
     color: $c_light;
     line-height: 1.5rem;
     & > li > span {
-      letter-spacing: 0.2rem;
+      margin-left: 0.5rem;
+      letter-spacing: 0.15rem;
     }
-    & > li:nth-child(2) > span {
-      letter-spacing: 0.4rem;
+    & > li:nth-child(4) > span {
+      letter-spacing: 0.35rem;
     }
     & > li > a {
       color: $c_light;
@@ -230,7 +231,7 @@ body {
 .services {
   position: relative;
   background-color: $c_gray_light;
-  &_content {
+  &Cnt {
     padding-bottom: 1.2rem;
     display: flex;
     justify-content: space-between;
@@ -256,7 +257,7 @@ body {
   }
 }
 
-.portfolioCnt {
+.portfolio {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -369,6 +370,9 @@ body {
   }
 }
 
+.skills {
+}
+
 .certificate {
   & > .title {
     transform: translateY(1.25rem);
@@ -436,6 +440,69 @@ body {
     &:target {
       z-index: 2;
       opacity: 1;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  background-color: $c_dark;
+  &_title {
+    position: relative;
+    width: 150px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: $c_light;
+    background-color: $c_main;
+  }
+  &_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      display: block;
+      margin: 1rem 0.5rem;
+      padding: 0.25rem 0.3rem;
+      color: $c_light;
+      background-color: #282828;
+      text-decoration: none;
+      transition: color 0.5s, background-color.5s;
+      &:hover {
+        color: #282828;
+        background-color: $c_light;
+      }
+    }
+  }
+  &_reserved {
+    margin-bottom: 1rem;
+    color: $c_light;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  &_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 0.25rem;
+    color: $c_gray_dark;
+    background-color: $c_main;
+    text-decoration: none;
+    transition: color 0.5s;
+    &:hover {
+      color: $c_light;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.25rem;
+      left: 0;
+      right: 0;
+      height: 0.25rem;
+      background-color: $c_main;
     }
   }
 }

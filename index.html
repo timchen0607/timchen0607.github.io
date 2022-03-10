@@ -13,20 +13,21 @@
     <link rel="stylesheet" href="./css/global.min.css" />
   </head>
   <body x-data="xData">
-    <section class="banner">
+    <section id="top" class="banner">
       <div class="container">
         <h1>I'm Tim Chen</h1>
+        <i class="icofont-scroll-double-down"></i>
       </div>
     </section>
-    <section class="profile">
+    <section id="profile">
       <h2 class="title">個人資料<span>PROFILE</span></h2>
-      <div class="profileCnt">
-        <div class="profileCnt-image">
-          <h3 class="profileCnt-name">陳政丰</h3>
+      <div class="profile">
+        <div class="profile-image">
+          <h3 class="profile-name">陳政丰</h3>
           <p>Nothing is Fun Until You Are Good at It.</p>
         </div>
-        <div class="profileCnt-text">
-          <div class="profileCnt-intro">
+        <div class="profile-text">
+          <div class="profile-intro">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
               eos, voluptatum nulla culpa magni eius maiores optio fuga commodi
@@ -40,7 +41,15 @@
               Laborum culpa eius, adipisci cum similique consectetur.
             </p>
           </div>
-          <ol class="profileCnt-info">
+          <ul class="profile-info">
+            <li>
+              <i class="icofont-calendar"></i>
+              <span>1998-06-07</span>
+            </li>
+            <li>
+              <i class="icofont-google-map"></i>
+              <span>Yunlin, Taiwan</span>
+            </li>
             <li>
               <i class="icofont-email"></i>
               <span>Email：</span>
@@ -51,68 +60,68 @@
             <li>
               <i class="icofont-line-messenger"></i>
               <span>Line：</span>
-              <a href="">timchen0607</a>
+              <a href="https://line.me/ti/p/5k-IA0lBdE" target="_blank">
+                timchen0607
+              </a>
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
     </section>
-    <section class="services">
-      <ul class="services_content container">
-        <li class="services_content-item">
+    <section id="services" class="services">
+      <ul class="servicesCnt container">
+        <li class="servicesCnt-item">
           <i class="icofont-code-alt"></i>
           WEB DEVELOPER
         </li>
-        <li class="services_content-item">
-          <i class="icofont-bank"></i>Fintech
-        </li>
+        <li class="servicesCnt-item"><i class="icofont-bank"></i>Fintech</li>
       </ul>
     </section>
-    <section class="portfolio">
+    <section id="portfolio">
       <h2 class="title">作品集<span>PORTFOLIO</span></h2>
       <div class="container">
         <template x-if="portfolio">
-          <div class="portfolioCnt">
+          <div class="portfolio">
             <template x-for="item in portfolio">
-              <div class="portfolioCnt-item">
-                <div class="portfolioCnt-image">
+              <div class="portfolio-item">
+                <div class="portfolio-image">
                   <template x-if="item.image">
                     <img :src="item.image" :alt="item.title" />
                   </template>
                   <template x-if="!item.image">
-                    <div class="ico"><i class="icofont-code-alt"></i></div>
+                    <div class="ico"><i class="icofont-code"></i></div>
                   </template>
-                  <div class="portfolioCnt-link">
+                  <div class="portfolio-link">
                     <a
-                      class="portfolioCnt-linkBtn"
+                      class="portfolio-linkBtn"
                       :href="item.url"
                       target="_blank"
                     >
                       <i class="icofont-link-alt"></i>
                     </a>
                   </div>
-                  <h4 class="portfolioCnt-title" x-text="item.title"></h4>
+                  <h4 class="portfolio-title" x-text="item.title"></h4>
                 </div>
-                <h4 class="portfolioCnt-subTitle" x-text="item.subTitle"></h4>
-                <p class="portfolioCnt-dateTime" x-text="item.dateTime"></p>
-                <div class="portfolioCnt-skills">
+                <h4 class="portfolio-subTitle" x-text="item.subTitle"></h4>
+                <p class="portfolio-dateTime" x-text="item.dateTime"></p>
+                <div class="portfolio-skills">
                   <template x-for="skill in item.skill.split('|')">
                     <span
-                      :class="'portfolioCnt-skill portfolioCnt-skill-' + skill.replace(' ','')"
+                      :class="'portfolio-skill portfolio-skill-' + skill.replace(' ','')"
                       x-text="skill"
                     ></span>
                   </template>
                 </div>
-                <p class="portfolioCnt-decs" x-text="item.decs"></p>
+                <p class="portfolio-decs" x-text="item.decs"></p>
               </div>
             </template>
           </div>
         </template>
       </div>
     </section>
-    <section class="skills">
+    <!-- <section id="skills" class="skills">
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
-      <!-- <ul class="skills_content">
+      <ul class="skills_content">
         <li>Vue2 / 3</li>
         <li>CSS3 / SCSS</li>
         <li>JavaScript(ES6+)</li>
@@ -122,9 +131,9 @@
         <li>ASP.NET Core</li>
         <li>Line Bot</li>
         <li>Python</li>
-      </ul> -->
-    </section>
-    <section class="experience">
+      </ul>
+    </section> -->
+    <section id="experience">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
       <ul class="container timeline">
         <li class="timeline-item">
@@ -158,7 +167,7 @@
         </li>
       </ul>
     </section>
-    <section class="certificate" id="cert">
+    <section id="certificate" class="certificate">
       <h2 class="title">證照<span>CERTIFICATE</span></h2>
       <div class="certificate-bg">
         <div class="container">
@@ -193,20 +202,27 @@
       <template x-if="finCert">
         <div>
           <template x-for="item in finCert">
-            <a href="#cert" class="certificate-lightbox" :id="item.title">
+            <a
+              href="#certificate"
+              class="certificate-lightbox"
+              :id="item.title"
+            >
               <img :src="item.image" :alt="item.title" />
             </a>
           </template>
           <template x-for="item in techCert">
-            <a href="#cert" class="certificate-lightbox" :id="item.title">
+            <a
+              href="#certificate"
+              class="certificate-lightbox"
+              :id="item.title"
+            >
               <img :src="item.image" :alt="item.title" />
             </a>
           </template>
         </div>
       </template>
     </section>
-
-    <section class="eduction">
+    <section id="eduction">
       <h2 class="title">學歷<span>EDUCTION</span></h2>
       <ul class="container timeline">
         <li class="timeline-item">
@@ -223,68 +239,31 @@
         </li>
       </ul>
     </section>
-    <section class="blog">
+    <!-- <section id="blog" class="blog">
       <h2 class="title">部落格<span>　BLOG　</span></h2>
-    </section>
+    </section> -->
+    <footer id="eduction" class="contact">
+      <h2 class="contact_title">Contact Me On</h2>
+      <ul class="contact_list">
+        <li>
+          <a class="contact_list-item" href="mailto:zousheng0607@gmail.com">
+            <i class="icofont-email"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="contact_list-item"
+            href="https://line.me/ti/p/5k-IA0lBdE"
+            target="_blank"
+          >
+            <i class="icofont-line-messenger"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="contact_reserved">Tim Chen - All Rights Reserved © 2022</p>
+      <a class="contact_top" href="#top"><i class="icofont-stylish-up"></i></a>
+    </footer>
 
-    <footer class="contact"></footer>
-
-    <!-- <footer class="contact">
-      <div class="contact_container">
-        <h2 class="title title_light">
-          聯絡方式<span class="title_light_en">CONTACT METHOD</span>
-        </h2>
-        <ul class="contact_content">
-          <li>
-            <a href="mailto:a0963573232@gmail.com" class="contact_content_item">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/tim.chen.37051"
-              class="contact_content_item"
-              target="_blank"
-              rel="noreferrer noopenner"
-            >
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://line.me/ti/p/kw6N40kdgT"
-              class="contact_content_item"
-              target="_blank"
-              rel="noreferrer noopenner"
-            >
-              <i class="fab fa-line"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://codepen.io/timchen0607"
-              class="contact_content_item"
-              target="_blank"
-              rel="noreferrer noopenner"
-            >
-              <i class="fab fa-codepen"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@timchen0607"
-              class="contact_content_item"
-              target="_blank"
-              rel="noreferrer noopenner"
-            >
-              <i class="fab fa-medium"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer> -->
-
-    <i class="icofont-paper"></i>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
