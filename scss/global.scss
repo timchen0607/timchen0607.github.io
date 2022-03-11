@@ -248,7 +248,7 @@ body {
 .banner_text {
   position: fixed;
   top: 20vh;
-  bottom: 40vh;
+  bottom: 15vh;
   left: 0;
   right: 0;
   display: flex;
@@ -277,19 +277,27 @@ body {
     font-weight: bold;
     letter-spacing: 0.75rem;
   }
-  &-subTitle {
+  &-subTitle,
+  &-describe {
     font-family: $font;
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.75rem;
   }
+  &-describe {
+    padding: 0.5rem 1rem;
+    background-color: $c_light_trans3;
+  }
   @keyframes progress {
     0% {
       background-position: 0% 0%;
     }
-    50% {
-      background-position: 0% 40%;
+    25% {
+      background-position: 0% 10%;
+    }
+    26% {
+      background-position: 0% 10%;
     }
     51% {
       background-position: 0% 85%;
@@ -554,6 +562,7 @@ body {
     background-attachment: fixed;
     > .container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
     }
