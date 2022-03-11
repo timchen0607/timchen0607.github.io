@@ -23,6 +23,7 @@ document.addEventListener("alpine:init", () => {
         .then(() => {
           new Swiper(".certSwiper", {
             effect: "cards",
+            cardsEffect: { slideShadows: false },
             grabCursor: true,
           });
         });
