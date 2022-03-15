@@ -30,9 +30,10 @@ document.addEventListener("alpine:init", () => {
     },
     skillsParallax() {
       this.$el.onscroll = function myFunction() {
+        const yValue = window.innerWidth > 768 ? 0.5 : 0.5;
         const target = document.querySelector(".certificate-bg");
-        const yValue = document.scrollingElement.scrollTop * 0.5;
-        target.style.backgroundPosition = "center " + yValue + "px";
+        const scroll = document.scrollingElement.scrollTop;
+        target.style.backgroundPosition = "center " + scroll * yValue + "px";
       };
     },
   }));
