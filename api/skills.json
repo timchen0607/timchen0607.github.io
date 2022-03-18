@@ -33,12 +33,19 @@
     ]
   },
   {
-    "name": "SCSS & CSS3",
+    "name": "SCSS ",
     "level": 3,
     "decs": [
       "熟悉 mixin 使用方式",
       "熟悉 Variables 使用方式",
       "熟悉 if/for 使用方式",
+      "熟悉 import 使用方式"
+    ]
+  },
+  {
+    "name": "CSS3",
+    "level": 3,
+    "decs": [
       "熟悉 animation 與 transition 操作",
       "熟悉 CSS3 variables 使用方式"
     ]
@@ -49,7 +56,7 @@
     "decs": [
       "熟悉各種常用 Components、Utilities",
       "曾使用過與 Vue 相結合之 BootstrapVue",
-      "曾使用過具高功能性表格工具 Bootstrap Table"
+      "曾使用過表格外掛套件 Bootstrap Table"
     ]
   },
   {

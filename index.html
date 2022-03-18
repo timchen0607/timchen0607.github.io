@@ -157,9 +157,28 @@
     </section>
     <section id="skills" class="skills">
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
-      <ul>
-        <li>CSS3 / SCSS</li>
-      </ul>
+      <template x-if="skills">
+        <ul class="container skills-content">
+          <template x-for="item in skills">
+            <li class="skills-item">
+              <div class="skills-front">
+                <h3 class="skills-name" x-text="item.name"></h3>
+                <div class="skills-level">
+                  <template x-for="l in item.level">
+                    <i class="icofont-star"></i>
+                  </template>
+                </div>
+                <p class="skills-text">點擊觀看說明</p>
+              </div>
+              <div class="skills-back">
+                <template x-for="d in item.decs">
+                  <p class="skills-decs" x-text="d"></p>
+                </template>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </template>
     </section>
     <section id="experience" class="cover">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
@@ -314,7 +333,7 @@
         </li>
       </ul>
       <p class="contact_reserved">Tim Chen - All Rights Reserved © 2022</p>
-      <a class="contact_top" href="#top"><i class="icofont-stylish-up"></i></a>
+      <a class="contact_top" href="#top"><i class="icofont-swoosh-up"></i></a>
     </footer>
 
     <script src="https://unpkg.com/alpinejs" defer></script>

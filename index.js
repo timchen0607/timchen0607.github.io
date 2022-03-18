@@ -2,10 +2,12 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("xData", () => ({
     init() {
       this.portfolio = [];
+      this.skills = [];
       this.finCert = [];
       this.techCert = [];
       this.blogs = [];
       this.fetchPortfolio();
+      this.fetchSkills();
       this.fetchCertificate();
       this.fetchBlogs();
       this.skillsParallax();
@@ -14,6 +16,11 @@ document.addEventListener("alpine:init", () => {
       fetch("https://timchen0607.github.io/api/portfolio.json")
         .then((res) => res.json())
         .then((json) => (this.portfolio = json));
+    },
+    fetchSkills() {
+      fetch("https://timchen0607.github.io/api/skills.json")
+        .then((res) => res.json())
+        .then((json) => (this.skills = json));
     },
     fetchCertificate() {
       fetch("https://timchen0607.github.io/api/certificate.json")
