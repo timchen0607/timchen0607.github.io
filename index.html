@@ -276,8 +276,32 @@
         </li>
       </ul>
     </section>
-    <section id="blog" class="blog">
-      <!-- <h2 class="title">部落格<span>　BLOG　</span></h2> -->
+    <section id="blog">
+      <h2 class="title">部落格<span>　BLOG　</span></h2>
+      <template x-if="blogs">
+        <div class="blogs">
+          <template x-for="item in blogs">
+            <div class="blogs-item">
+              <div class="blogs-img">
+                <img :src="item.image" alt="item.title" />
+              </div>
+              <div class="blogs-content">
+                <h3 class="blogs-title" x-text="item.title"></h3>
+                <p class="blogs-views">
+                  <i class="icofont-calendar"></i>
+                  <span x-text="item.dateTime"></span>
+                  <i class="icofont-eye-alt"></i>
+                  <span x-text="item.views"></span>
+                </p>
+                <p class="blogs-desc" x-text="item.decs"></p>
+                <a :href="item.url" class="blogs-btn" target="_blank"
+                  >READ MORE</a
+                >
+              </div>
+            </div>
+          </template>
+        </div>
+      </template>
     </section>
     <footer id="eduction" class="contact">
       <h2 class="contact_title">Contact Me On</h2>

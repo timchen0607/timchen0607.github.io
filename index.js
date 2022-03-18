@@ -4,8 +4,10 @@ document.addEventListener("alpine:init", () => {
       this.portfolio = [];
       this.finCert = [];
       this.techCert = [];
+      this.blogs = [];
       this.fetchPortfolio();
       this.fetchCertificate();
+      this.fetchBlogs();
       this.skillsParallax();
     },
     fetchPortfolio() {
@@ -27,6 +29,11 @@ document.addEventListener("alpine:init", () => {
             grabCursor: true,
           });
         });
+    },
+    fetchBlogs() {
+      fetch("https://timchen0607.github.io/api/blogs.json")
+        .then((res) => res.json())
+        .then((json) => (this.blogs = json));
     },
     skillsParallax() {
       this.$el.onscroll = function myFunction() {
