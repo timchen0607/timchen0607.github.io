@@ -108,6 +108,9 @@ body {
         letter-spacing: 0.75rem;
         color: $c_gray_dark;
         font-family: $font_sub;
+        @include mobile {
+          color: $c_gray;
+        }
       }
     }
     &:nth-child(odd) {
@@ -129,6 +132,9 @@ body {
       & > .timeline-icon {
         left: unset;
         right: 0;
+        @include mobile {
+          right: 0.5rem;
+        }
       }
       & > * {
         text-align: right;
@@ -159,6 +165,9 @@ body {
     height: 2rem;
     color: $c_light;
     background-color: $c_dark;
+    @include mobile {
+      left: 0.5rem;
+    }
   }
   &-title {
     position: relative;
@@ -700,6 +709,9 @@ body {
     margin: 0 auto 1rem;
     border: 1px solid $c_gray_light;
     overflow: hidden;
+    @include mobile {
+      flex-wrap: wrap;
+    }
     &:hover {
       box-shadow: 0px 0px 5px 1px $c_gray_light;
       & > .blogs-img::after {
@@ -710,6 +722,9 @@ body {
   &-img {
     flex: 1;
     position: relative;
+    @include mobile {
+      flex: unset;
+    }
     & > img {
       width: 100%;
       height: 100%;
@@ -733,6 +748,9 @@ body {
     flex-direction: column;
     padding: 1.5rem;
     min-height: 200px;
+    @include mobile {
+      padding: 1rem;
+    }
   }
   &-title {
     padding-bottom: 0.5rem;
@@ -754,8 +772,9 @@ body {
     }
   }
   &-desc {
-    letter-spacing: 0.1rem;
     line-height: 1.2rem;
+    text-align: justify;
+    letter-spacing: 0.1rem;
   }
   &-btn {
     display: inline-block;
