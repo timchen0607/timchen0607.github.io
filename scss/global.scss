@@ -233,8 +233,8 @@ body {
     position: absolute;
     display: block;
     top: calc(50% - 1px);
-    left: 0;
-    right: 0;
+    left: 1rem;
+    right: 1rem;
     border-top: 1px solid $c_main;
     @include pad {
       border-bottom: 1px solid $c_main;
