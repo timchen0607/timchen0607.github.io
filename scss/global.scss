@@ -771,8 +771,9 @@ body {
     font-size: 1.52rem;
   }
   &-decs {
+    margin: 0.1rem 0 0.1rem 1rem;
     color: $c_gray-dark;
-    margin: 0.25rem 0 0.25rem 1rem;
+    line-height: 1.1rem;
     text-indent: -0.8rem;
     &::before {
       content: "●";
