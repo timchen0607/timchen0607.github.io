@@ -6,8 +6,11 @@ document.addEventListener("alpine:init", () => {
       this.finCert = [];
       this.techCert = [];
       this.blogs = [];
-      this.skillsParallax();
       this.descList = [true, false, false, false, false, false];
+      this.portfolioIdx = 1;
+      this.skillsIdx = 1;
+      this.blogsIdx = 1;
+      this.skillsParallax();
       this.fetchPortfolio()
         .then(() => this.fetchSkills())
         .then(() => this.fetchCertificate())
@@ -56,10 +59,8 @@ document.addEventListener("alpine:init", () => {
         target.style.backgroundPosition = "center " + scroll * yValue + "px";
       };
     },
-    collapse(target) {
-      target = target.split("-");
-      if (target[0] == "desc")
-        this.descList[target[1]] = !this.descList[target[1]];
+    collapse(idx) {
+      this.descList[idx] = !this.descList[idx];
     },
   }));
 });
