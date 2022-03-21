@@ -72,8 +72,7 @@ body {
       top: 50%;
       display: block;
       width: 75px;
-      height: 0;
-      border: 1px solid $c_gray_dark;
+      border-top: 2px solid $c_gray_dark;
     }
     &::before {
       left: 0%;
@@ -207,7 +206,7 @@ body {
 .showMore {
   max-width: 600px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem;
   position: relative;
   text-align: center;
   &-btn {
@@ -237,6 +236,9 @@ body {
     left: 0;
     right: 0;
     border-top: 1px solid $c_main;
+    @include pad {
+      border-bottom: 1px solid $c_main;
+    }
   }
 }
 
