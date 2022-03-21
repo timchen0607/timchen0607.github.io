@@ -6,24 +6,29 @@ document.addEventListener("alpine:init", () => {
       this.finCert = [];
       this.techCert = [];
       this.blogs = [];
-      this.fetchPortfolio();
-      this.fetchSkills();
-      this.fetchCertificate();
-      this.fetchBlogs();
       this.skillsParallax();
+      this.fetchPortfolio()
+        .then(() => this.fetchSkills())
+        .then(() => this.fetchCertificate())
+        .then(() => this.fetchBlogs())
+        .then(() => {
+          document.documentElement.style.overflow = "auto";
+          document.body.style.overflow = "auto";
+          document.getElementById("loading").classList.add("hide");
+        });
     },
     fetchPortfolio() {
-      fetch("https://timchen0607.github.io/api/portfolio.json")
+      return fetch("https://timchen0607.github.io/api/portfolio.json")
         .then((res) => res.json())
         .then((json) => (this.portfolio = json));
     },
     fetchSkills() {
-      fetch("https://timchen0607.github.io/api/skills.json")
+      return fetch("https://timchen0607.github.io/api/skills.json")
         .then((res) => res.json())
         .then((json) => (this.skills = json));
     },
     fetchCertificate() {
-      fetch("https://timchen0607.github.io/api/certificate.json")
+      return fetch("https://timchen0607.github.io/api/certificate.json")
         .then((res) => res.json())
         .then((json) => {
           this.finCert = json.finance;
@@ -38,7 +43,7 @@ document.addEventListener("alpine:init", () => {
         });
     },
     fetchBlogs() {
-      fetch("https://timchen0607.github.io/api/blogs.json")
+      return fetch("https://timchen0607.github.io/api/blogs.json")
         .then((res) => res.json())
         .then((json) => (this.blogs = json));
     },
