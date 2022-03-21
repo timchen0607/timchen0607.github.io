@@ -1,104 +1,122 @@
-[
-  {
-    "name": "Vue 3 & Vue 2",
-    "level": 3,
-    "decs": [
-      "能夠熟練使用 Composition API",
-      "能夠熟練使用 Option API",
-      "理解元件的生命週期",
-      "透過 props 傳遞資料"
-    ]
-  },
-  {
-    "name": "Vue Router",
-    "level": 3,
-    "decs": [
-      "能夠透過 Vue Router 建置 SPA 網站",
-      "透過路由守衛（Navigation Guards）控制網站跳轉邏輯"
-    ]
-  },
-  {
-    "name": "Alpine.js",
-    "level": 3,
-    "decs": ["能夠透過 Alpine.js 快速開發由資料驅動的網頁"]
-  },
-  {
-    "name": "JavaScript",
-    "level": 3,
-    "decs": [
-      "熟悉 ES6 語法糖",
-      "熟悉箭頭函式開發方式",
-      "熟悉 Promise 使用方式",
-      "能以原生 JS 操控 DOM 元素"
-    ]
-  },
-  {
-    "name": "SCSS ",
-    "level": 3,
-    "decs": [
-      "熟悉 mixin 使用方式",
-      "熟悉 Variables 使用方式",
-      "熟悉 if/for 使用方式",
-      "熟悉 import 使用方式"
-    ]
-  },
-  {
-    "name": "CSS3",
-    "level": 3,
-    "decs": [
-      "熟悉 animation 與 transition 操作",
-      "熟悉 CSS3 variables 使用方式"
-    ]
-  },
-  {
-    "name": "Bootstrap 5&4",
-    "level": 3,
-    "decs": [
-      "熟悉各種常用 Components、Utilities",
-      "曾使用過與 Vue 相結合之 BootstrapVue",
-      "曾使用過表格外掛套件 Bootstrap Table"
-    ]
-  },
-  {
-    "name": "Line Bot & Line Notify",
-    "level": 3,
-    "decs": [
-      "熟悉建置 Line 機器人與通知之流程",
-      "瞭解如何與 firebase 串接",
-      "曾自製行事曆活動通知功能"
-    ]
-  },
-  {
-    "name": "jQuery 3",
-    "level": 3,
-    "decs": ["能以 jQuery 操作 DOM 元素", "曾以 jQuery 開發過購物網站(前端)"]
-  },
-  {
-    "name": "Node.js",
-    "level": 2,
-    "decs": [
-      "曾使用 Node.js 建置簡易 Server 服務",
-      "曾使用 __dirname、__filename 操作本地端檔案"
-    ]
-  },
-  {
-    "name": "ASP.NET Core",
-    "level": 2,
-    "decs": ["曾使用 .NET Core 開發購物網站(前後端)"]
-  },
-  {
-    "name": "Python",
-    "level": 2,
-    "decs": ["熟悉 Python 常用語法", "使用過網頁爬蟲套件", "使用過金融相關套件"]
-  },
-  {
-    "name": "Express",
-    "level": 1,
-    "decs": ["曾使用 Express 架設 Web API"]
-  },
-  {
-    "name": "PHP",
-    "level": 1,
-    "decs": ["曾使用 PHP 開發購物網站(後端)"]
-  }
-]
+{
+  "finance": [
+    {
+      "name": "投信投顧業務人員",
+      "decs": ["取得投信投顧業務人員資格", ""]
+    },
+    {
+      "name": "信託業業務員",
+      "decs": ["取得信託業業務員資格", "中華民國110年12月30日"]
+    },
+    {
+      "name": "期貨商業務員",
+      "decs": ["取得期貨商業務員資格", "中華民國110年12月18日"]
+    },
+    {
+      "name": "證券商業務員",
+      "decs": ["取得證券商業務人員資格", "中華民國110年11月27日"]
+    },
+    {
+      "name": "金融市場常識與職業道德",
+      "decs": ["通過金融市場常識與職業道德", "中華民國110年10月23日"]
+    }
+  ],
+  "FrontEnd": [
+    {
+      "name": "Vue 3 & Vue 2",
+      "decs": [
+        "能夠熟練使用 Composition API",
+        "能夠熟練使用 Option API",
+        "理解元件的生命週期",
+        "透過 props 傳遞資料"
+      ]
+    },
+    {
+      "name": "Vue Router",
+      "decs": [
+        "能夠透過 Vue Router 建置 SPA 網站",
+        "透過路由守衛（Navigation Guards）控制網站跳轉邏輯"
+      ]
+    },
+    {
+      "name": "Alpine.js",
+      "decs": ["能夠透過 Alpine.js 快速開發由資料驅動的網頁"]
+    },
+    {
+      "name": "JavaScript",
+      "decs": [
+        "熟悉 ES6 語法糖",
+        "熟悉箭頭函式開發方式",
+        "熟悉 Promise 使用方式",
+        "能以原生 JS 操控 DOM 元素"
+      ]
+    },
+    {
+      "name": "SCSS ",
+      "decs": [
+        "熟悉 mixin 使用方式",
+        "熟悉 Variables 使用方式",
+        "熟悉 if/for 使用方式",
+        "熟悉 import 使用方式"
+      ]
+    },
+    {
+      "name": "CSS3",
+      "decs": [
+        "熟悉 animation 與 transition 操作",
+        "熟悉 CSS3 variables 使用方式"
+      ]
+    },
+    {
+      "name": "Bootstrap 5&4",
+      "decs": [
+        "熟悉各種常用 Components、Utilities",
+        "曾使用過與 Vue 相結合之 BootstrapVue",
+        "曾使用過表格外掛套件 Bootstrap Table"
+      ]
+    },
+    {
+      "name": "jQuery 3",
+      "decs": ["能以 jQuery 操作 DOM 元素", "曾以 jQuery 開發過購物網站(前端)"]
+    }
+  ],
+  "BackEnd": [
+    {
+      "name": "Node.js",
+      "decs": [
+        "曾使用 Node.js 建置簡易 Server 服務",
+        "曾使用 __dirname、__filename 操作本地端檔案"
+      ]
+    },
+    {
+      "name": "Express",
+      "decs": ["曾使用 Express 架設 Web API"]
+    },
+    {
+      "name": "PHP",
+      "decs": ["曾使用 PHP 開發購物網站(後端)"]
+    },
+    {
+      "name": "ASP.NET Core",
+      "decs": ["曾使用 .NET Core 開發購物網站(前後端)"]
+    }
+  ],
+  "Others": [
+    {
+      "name": "Line Bot & Line Notify",
+      "decs": [
+        "熟悉建置 Line 機器人與通知之流程",
+        "瞭解如何與 firebase 串接",
+        "曾自製行事曆活動通知功能"
+      ]
+    },
+    {
+      "name": "Python",
+      "decs": [
+        "熟悉 Python 常用語法",
+        "使用過網頁爬蟲套件",
+        "使用過金融相關套件"
+      ]
+    }
+  ]
+}
