@@ -12,7 +12,8 @@ document.addEventListener("alpine:init", () => {
       this.skillsIdx = 1;
       this.blogsIdx = 1;
       this.skillsParallax();
-      this.fetchProfile(() => this.fetchPortfolio())
+      this.fetchProfile()
+        .then(() => this.fetchPortfolio())
         .then(() => this.fetchSkills())
         .then(() => this.fetchCertificate())
         .then(() => this.fetchBlogs())
