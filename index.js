@@ -9,7 +9,10 @@ document.addEventListener("alpine:init", () => {
       this.blogs = [];
       this.profileIdx = 0;
       this.portfolioIdx = 1;
-      this.skillsIdx = 1;
+      this.skillsFinanceIdx = 1;
+      this.skillsFrontEndIdx = 1;
+      this.skillsBackEndIdx = 1;
+      this.skillsOthersIdx = 1;
       this.blogsIdx = 1;
       this.skillsParallax();
       this.fetchProfile()

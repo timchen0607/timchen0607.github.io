@@ -174,30 +174,119 @@
     <section id="skills" class="skills">
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
       <template x-if="skills">
-        <ul class="container skills-content">
-          <template x-for="(item,idx) in skills">
-            <li class="skills-item" x-show="idx < skillsIdx*4">
-              <div class="skills-front">
-                <h3 class="skills-name" x-text="item.name"></h3>
-                <div class="skills-level">
-                  <template x-for="l in item.level">
-                    <i class="icofont-star"></i>
+        <div class="container">
+          <h3>金融類<span>Finance</span></h3>
+          <ul class="skills-content">
+            <template x-for="(item,idx) in skills.Finance">
+              <li class="skills-item" x-show="idx < skillsFinanceIdx*4">
+                <div class="skills-front">
+                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <div class="skills-level">
+                    <template x-for="l in item.level">
+                      <i class="icofont-star"></i>
+                    </template>
+                  </div>
+                  <p class="skills-text">點擊觀看說明</p>
+                </div>
+                <div class="skills-back">
+                  <template x-for="d in item.decs">
+                    <p class="skills-decs" x-text="d"></p>
                   </template>
                 </div>
-                <p class="skills-text">點擊觀看說明</p>
-              </div>
-              <div class="skills-back">
-                <template x-for="d in item.decs">
-                  <p class="skills-decs" x-text="d"></p>
-                </template>
-              </div>
-            </li>
+              </li>
+            </template>
+          </ul>
+          <template x-if="skills.Finance.length > skillsFinanceIdx*4">
+            <div class="showMore">
+              <button class="showMore-btn" @click="skillsFinanceIdx+=1;">
+                SHOW MORE
+              </button>
+            </div>
           </template>
-        </ul>
-      </template>
-      <template x-if="skills && skills.length > skillsIdx*4">
-        <div class="showMore">
-          <button class="showMore-btn" @click="skillsIdx+=1;">SHOW MORE</button>
+          <h3>前端技能<span>FrontEnd</span></h3>
+          <ul class="skills-content">
+            <template x-for="(item,idx) in skills.FrontEnd">
+              <li class="skills-item" x-show="idx < skillsFrontEndIdx*4">
+                <div class="skills-front">
+                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <div class="skills-level">
+                    <template x-for="l in item.level">
+                      <i class="icofont-star"></i>
+                    </template>
+                  </div>
+                  <p class="skills-text">點擊觀看說明</p>
+                </div>
+                <div class="skills-back">
+                  <template x-for="d in item.decs">
+                    <p class="skills-decs" x-text="d"></p>
+                  </template>
+                </div>
+              </li>
+            </template>
+          </ul>
+          <template x-if="skills.FrontEnd.length > skillsFrontEndIdx*4">
+            <div class="showMore">
+              <button class="showMore-btn" @click="skillsFrontEndIdx+=1;">
+                SHOW MORE
+              </button>
+            </div>
+          </template>
+          <h3>後端技能<span>BackEnd</span></h3>
+          <ul class="skills-content">
+            <template x-for="(item,idx) in skills.BackEnd">
+              <li class="skills-item" x-show="idx < skillsBackEndIdx*4">
+                <div class="skills-front">
+                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <div class="skills-level">
+                    <template x-for="l in item.level">
+                      <i class="icofont-star"></i>
+                    </template>
+                  </div>
+                  <p class="skills-text">點擊觀看說明</p>
+                </div>
+                <div class="skills-back">
+                  <template x-for="d in item.decs">
+                    <p class="skills-decs" x-text="d"></p>
+                  </template>
+                </div>
+              </li>
+            </template>
+          </ul>
+          <template x-if="skills.BackEnd.length > skillsBackEndIdx*4">
+            <div class="showMore">
+              <button class="showMore-btn" @click="skillsBackEndIdx+=1;">
+                SHOW MORE
+              </button>
+            </div>
+          </template>
+          <h3>其他技能<span>Others</span></h3>
+          <ul class="skills-content">
+            <template x-for="(item,idx) in skills.Others">
+              <li class="skills-item" x-show="idx < skillsOthersIdx*4">
+                <div class="skills-front">
+                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <div class="skills-level">
+                    <template x-for="l in item.level">
+                      <i class="icofont-star"></i>
+                    </template>
+                  </div>
+                  <p class="skills-text">點擊觀看說明</p>
+                </div>
+                <div class="skills-back">
+                  <template x-for="d in item.decs">
+                    <p class="skills-decs" x-text="d"></p>
+                  </template>
+                </div>
+              </li>
+            </template>
+          </ul>
+          <template x-if="skills.Others.length > skillsOthersIdx*4">
+            <div class="showMore">
+              <button class="showMore-btn" @click="skillsOthersIdx+=1;">
+                SHOW MORE
+              </button>
+            </div>
+          </template>
         </div>
       </template>
     </section>

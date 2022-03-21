@@ -763,14 +763,13 @@ body {
   &-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
     padding: 1rem;
   }
   &-item {
     width: 23%;
     height: 150px;
-    margin-bottom: 1rem;
+    margin: 0 1% 1rem;
     position: relative;
     perspective: 1000px;
     @include pad {
