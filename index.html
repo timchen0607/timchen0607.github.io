@@ -54,76 +54,27 @@
           <p>Nothing is Fun Until You Are Good at It.</p>
         </div>
         <div class="profile-text">
-          <div class="profile-intro">
-            <h4
-              class="profile-subTitle"
-              :class="descList[0] ? 'show' : ''"
-              @click="collapse('0')"
-            >
-              程式興趣從小萌芽
-            </h4>
-            <p class="profile-desc" x-show="descList[0]">
-              我是陳政丰，從小就對電腦相當感興趣，自從有機會觸到網頁設計後，看著自己所撰寫的程式碼渲染成的網頁是一件十分有趣的且開心的事情，所以從此踏上寫程式這條路；我自認是一個心思細膩的人，所以寫網頁時常常會思考要如何最佳化使用者的使用流程與體驗，從錯誤中學習並接觸最新的技術等，網頁設計帶給我的信心也是推動我進步的動力。
-            </p>
-            <h4
-              class="profile-subTitle"
-              :class="descList[1] ? 'show' : ''"
-              @click="collapse('1')"
-            >
-              初次接觸網頁設計
-            </h4>
-            <p class="profile-desc" x-show="descList[1]">
-              大學在學期間曾修習過網頁設計相關課程，當時期末作業需要找尋商家訪問需求並協助其建置網站，恰巧當時的我在電算中心工讀，於是我尋思可以將原有的「校園授權軟體下載專區」網站重新設計開發，在決定了主題後我把我的構思與中心的同仁討論，他們也對我的想法予以肯定與支持，在討論過程中也瞭解到他們對於新網站有哪些功能上的需求，最終製作完成的作品也實際上線供全校教職員生使用並獲得老師與中心同仁的肯定，這對我朝網頁設計之路邁進的想法無異於打上一劑強心針。
-            </p>
-            <h4
-              class="profile-subTitle"
-              :class="descList[2] ? 'show' : ''"
-              @click="collapse('2')"
-            >
-              參與競賽與分享所學
-            </h4>
-            <p class="profile-desc" x-show="descList[2]">
-              大學三年級時曾參加大專院校程式設計競賽，以此為契機讓我在這段期間內大量練習網頁設計相關的技術，有了此次經驗我打鐵趁熱在學校內開設自主學習課程，吸引對於學習網頁設計有興趣的學弟妹，課堂中我將這段期間內所接觸到的技能，以主題式教學的方式分享給學弟妹，讓他們能多接觸到一些平時課堂上沒有學習到的技術，而我也達成教學相長的目的。
-            </p>
-            <h4
-              class="profile-subTitle"
-              :class="descList[3] ? 'show' : ''"
-              @click="collapse('3')"
-            >
-              初次接案與社群交流
-            </h4>
-            <p class="profile-desc" x-show="descList[3]">
-              大學三年級時藉由老師的媒合，協助雲林在地保養品商家建置購物網站，因此熟悉了購物網站建置的流程與後端開發技術，除此之外，也利用課餘時間參加線上技術研討社團來吸收新知，也會透過
-              Medium
-              撰寫技術文章分享所學，至今也收穫兩萬餘人觀看與50多位訂閱者，也會在
-              CodePen
-              上面分享一些好用的視覺效果，透過撰寫技術分享文也能使我重新梳理所學的知識，將其轉化為文字，並在與志同道合的同伴討論過程中發現自己有哪些不足之處，以此磨練自己的技術來更上一層樓。
-            </p>
-            <h4
-              class="profile-subTitle"
-              :class="descList[4] ? 'show' : ''"
-              @click="collapse('4')"
-            >
-              校外實習的全端經驗
-            </h4>
-            <p class="profile-desc" x-show="descList[4]">
-              大學四年級時有機會參加校外實習，前往資訊公司實習，因為工作需要全端的技能，在進公司後首先就必須學習新的工具，除了我原先熟悉的前端領域，亦須接觸後端領域來獨立作業，幸好在前輩簡單的講解後很快便步上軌道，實習初期協助公司重構原有的活動報名平台，待平台更新完善後，便被指派負責開發綜合商品購物網站來拓展公司營業觸角，最後終於在實習結束前如期完成上線，這些經驗帶給我十足的養分，除了令我更熟練前端開發與熟悉後端建置，也有了串接第三方金流的經驗，更必須思考如何完善網站後台的出貨流程，方便內部人員管理訂單與安排發貨。
-            </p>
-            <h4
-              class="profile-subTitle"
-              :class="descList[5] ? 'show' : ''"
-              @click="collapse('5')"
-            >
-              跨足金融、展望未來
-            </h4>
-            <p class="profile-desc" x-show="descList[5]">
-              上了碩士班之後，平時除了累積網頁作品外，在忙碌的課程之餘亦抽空摸索網頁爬蟲相關技術來爬取一些網站的資訊，並將其與
-              Line Notify 結合來製作直播活動通知工具。
-            </p>
-            <p class="profile-desc" x-show="descList[5]">
-              二年級時除了撰寫研究論文外，亦於假日期間參加「大專生金融就業公益專班」學習金融相關知識，雖然研究生只能旁聽但我卻從不缺席，在課程期間也成功考取了數張金融從業人員相關證照，來培養第二專長，以期能夠成為身兼金融與科技的跨領域人才，並從中累積金融與資訊相關技能。
-            </p>
-          </div>
+          <template x-if="profile">
+            <div class="profile-intro">
+              <template x-for="(item,idx) in profile">
+                <div>
+                  <h4
+                    class="profile-subTitle"
+                    :class="profileIdx === idx ? 'show' : ''"
+                    x-text="item.title"
+                    @click="profileIdx = idx"
+                  ></h4>
+                  <template x-for="txt in item.content">
+                    <p
+                      class="profile-desc"
+                      x-text="txt"
+                      x-show="profileIdx === idx"
+                    ></p>
+                  </template>
+                </div>
+              </template>
+            </div>
+          </template>
           <ul class="profile-info">
             <li>
               <i class="icofont-calendar"></i>

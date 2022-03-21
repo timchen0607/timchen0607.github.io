@@ -563,10 +563,12 @@ body {
     }
   }
   &-desc {
+    padding: 0.5rem 0;
     font-size: 1.1rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     text-align: justify;
     text-indent: 2em;
+    letter-spacing: 0.1rem;
   }
   &-info {
     color: $c_light;

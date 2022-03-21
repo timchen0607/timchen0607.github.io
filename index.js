@@ -1,17 +1,18 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("xData", () => ({
     init() {
+      this.profile = [];
       this.portfolio = [];
       this.skills = [];
       this.finCert = [];
       this.techCert = [];
       this.blogs = [];
-      this.descList = [true, false, false, false, false, false];
+      this.profileIdx = 0;
       this.portfolioIdx = 1;
       this.skillsIdx = 1;
       this.blogsIdx = 1;
       this.skillsParallax();
-      this.fetchPortfolio()
+      this.fetchProfile(() => this.fetchPortfolio())
         .then(() => this.fetchSkills())
         .then(() => this.fetchCertificate())
         .then(() => this.fetchBlogs())
@@ -20,6 +21,11 @@ document.addEventListener("alpine:init", () => {
           document.body.style.overflow = "auto";
           document.getElementById("loading").classList.add("hide");
         });
+    },
+    fetchProfile() {
+      return fetch("https://timchen0607.github.io/api/profile.json")
+        .then((res) => res.json())
+        .then((json) => (this.profile = json));
     },
     fetchPortfolio() {
       return fetch("https://timchen0607.github.io/api/portfolio.json")
@@ -58,9 +64,6 @@ document.addEventListener("alpine:init", () => {
         const scroll = document.scrollingElement.scrollTop;
         target.style.backgroundPosition = "center " + scroll * yValue + "px";
       };
-    },
-    collapse(idx) {
-      this.descList[idx] = !this.descList[idx];
     },
   }));
 });
