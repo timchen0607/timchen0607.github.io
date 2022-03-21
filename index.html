@@ -175,12 +175,14 @@
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
       <template x-if="skills">
         <div class="container">
-          <h3>金融類<span>Finance</span></h3>
+          <h3 class="skills-group">
+            <i class="icofont-bank"></i> 金融類<span>Finance</span>
+          </h3>
           <ul class="skills-content">
             <template x-for="(item,idx) in skills.Finance">
               <li class="skills-item" x-show="idx < skillsFinanceIdx*4">
                 <div class="skills-front">
-                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <h4 class="skills-name" x-text="item.name"></h4>
                   <div class="skills-level">
                     <template x-for="l in item.level">
                       <i class="icofont-star"></i>
@@ -203,12 +205,14 @@
               </button>
             </div>
           </template>
-          <h3>前端技能<span>FrontEnd</span></h3>
+          <h3 class="skills-group">
+            <i class="icofont-code-alt"></i> 前端技能<span>FrontEnd</span>
+          </h3>
           <ul class="skills-content">
             <template x-for="(item,idx) in skills.FrontEnd">
               <li class="skills-item" x-show="idx < skillsFrontEndIdx*4">
                 <div class="skills-front">
-                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <h4 class="skills-name" x-text="item.name"></h4>
                   <div class="skills-level">
                     <template x-for="l in item.level">
                       <i class="icofont-star"></i>
@@ -231,12 +235,14 @@
               </button>
             </div>
           </template>
-          <h3>後端技能<span>BackEnd</span></h3>
+          <h3 class="skills-group">
+            <i class="icofont-code-alt"></i> 後端技能<span>BackEnd</span>
+          </h3>
           <ul class="skills-content">
             <template x-for="(item,idx) in skills.BackEnd">
               <li class="skills-item" x-show="idx < skillsBackEndIdx*4">
                 <div class="skills-front">
-                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <h4 class="skills-name" x-text="item.name"></h4>
                   <div class="skills-level">
                     <template x-for="l in item.level">
                       <i class="icofont-star"></i>
@@ -259,12 +265,14 @@
               </button>
             </div>
           </template>
-          <h3>其他技能<span>Others</span></h3>
+          <h3 class="skills-group">
+            <i class="icofont-stock-mobile"></i> 其他技能<span>Others</span>
+          </h3>
           <ul class="skills-content">
             <template x-for="(item,idx) in skills.Others">
               <li class="skills-item" x-show="idx < skillsOthersIdx*4">
                 <div class="skills-front">
-                  <h3 class="skills-name" x-text="item.name"></h3>
+                  <h4 class="skills-name" x-text="item.name"></h4>
                   <div class="skills-level">
                     <template x-for="l in item.level">
                       <i class="icofont-star"></i>
