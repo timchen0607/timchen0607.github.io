@@ -198,7 +198,9 @@
               </li>
             </template>
           </ul>
-          <template x-if="skills.Finance.length > skillsFinanceIdx*4">
+          <template
+            x-if="skills.Finance && skills.Finance.length > skillsFinanceIdx*4"
+          >
             <div class="showMore">
               <button class="showMore-btn" @click="skillsFinanceIdx+=1;">
                 SHOW MORE
@@ -228,7 +230,9 @@
               </li>
             </template>
           </ul>
-          <template x-if="skills.FrontEnd.length > skillsFrontEndIdx*4">
+          <template
+            x-if="skills.FrontEnd && skills.FrontEnd.length > skillsFrontEndIdx*4"
+          >
             <div class="showMore">
               <button class="showMore-btn" @click="skillsFrontEndIdx+=1;">
                 SHOW MORE
@@ -258,7 +262,9 @@
               </li>
             </template>
           </ul>
-          <template x-if="skills.BackEnd.length > skillsBackEndIdx*4">
+          <template
+            x-if="skills.BackEnd && skills.BackEnd.length > skillsBackEndIdx*4"
+          >
             <div class="showMore">
               <button class="showMore-btn" @click="skillsBackEndIdx+=1;">
                 SHOW MORE
@@ -288,7 +294,9 @@
               </li>
             </template>
           </ul>
-          <template x-if="skills.Others.length > skillsOthersIdx*4">
+          <template
+            x-if="skills.Others && skills.Others.length > skillsOthersIdx*4"
+          >
             <div class="showMore">
               <button class="showMore-btn" @click="skillsOthersIdx+=1;">
                 SHOW MORE

@@ -222,7 +222,7 @@ body {
     transition: border-color 0.5s;
     outline: 0.75rem solid $c_light;
     cursor: pointer;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       top: 0;
@@ -611,8 +611,7 @@ body {
     }
     &-item {
       width: 48%;
-      margin: 1rem 0;
-      padding: 2rem 0;
+      padding: 1rem 0;
       text-align: center;
       & > i {
         font-size: 2rem;
@@ -819,12 +818,13 @@ body {
     padding: 0.5rem;
     transform: rotateX(-180deg);
   }
-  &-group,&-name {
+  &-group,
+  &-name {
     font-size: 1.2rem;
     font-weight: bold;
   }
-  &-group>span{
-    margin-left: .5rem;
+  &-group > span {
+    margin-left: 0.5rem;
     font-size: 1rem;
     color: $c_gray-dark;
   }
