@@ -129,24 +129,22 @@
           <div class="portfolio">
             <template x-for="(item,idx) in portfolio">
               <div class="portfolio-item" x-show="idx < portfolioIdx*3">
-                <div class="portfolio-image">
-                  <template x-if="item.image">
-                    <img :src="item.image" :alt="item.title" />
-                  </template>
-                  <template x-if="!item.image">
-                    <div class="ico"><i class="icofont-code"></i></div>
-                  </template>
-                  <div class="portfolio-link">
-                    <a
-                      class="portfolio-linkBtn"
-                      :href="item.url"
-                      target="_blank"
-                    >
-                      <i class="icofont-link-alt"></i>
-                    </a>
+                <a :href="item.url" class="portfolio-link" target="_blank">
+                  <div class="portfolio-image">
+                    <template x-if="item.image">
+                      <img :src="item.image" :alt="item.title" />
+                    </template>
+                    <template x-if="!item.image">
+                      <div class="ico"><i class="icofont-code"></i></div>
+                    </template>
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hoverIcon">
+                        <i class="icofont-link-alt"></i>
+                      </div>
+                    </div>
+                    <h4 class="portfolio-title" x-text="item.title"></h4>
                   </div>
-                  <h4 class="portfolio-title" x-text="item.title"></h4>
-                </div>
+                </a>
                 <h4 class="portfolio-subTitle" x-text="item.subTitle"></h4>
                 <p class="portfolio-dateTime" x-text="item.dateTime"></p>
                 <div class="portfolio-skills">

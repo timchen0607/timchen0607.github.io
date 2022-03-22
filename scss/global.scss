@@ -643,13 +643,18 @@ body {
   justify-content: space-around;
   align-items: stretch;
   padding: 2rem 0;
+  &-link {
+    color: $c_dark;
+    text-decoration: none;
+  }
   &-item {
+    display: block;
     width: 30%;
     margin: 0.5rem 0;
     padding: 0.5rem;
     border: 1px solid $c_gray;
     box-sizing: border-box;
-    &:hover .portfolio-link {
+    &:hover .portfolio-hover {
       z-index: 0;
     }
     &:hover .portfolio-title {
@@ -680,7 +685,7 @@ body {
       background-color: $c_gray_light;
     }
   }
-  &-link {
+  &-hover {
     position: absolute;
     top: 0;
     bottom: 2.2rem;
@@ -691,16 +696,13 @@ body {
     align-items: center;
     background-color: $c_light_trans3;
     z-index: -1;
-    &Btn {
+    &Icon {
       padding: 1rem;
       color: $c_light;
       background-color: $c_dark_trans4;
       font-size: 1.5rem;
       text-decoration: none;
       border-radius: 0.5rem;
-      &:hover {
-        color: $c_main;
-      }
     }
   }
   &-title {
@@ -817,16 +819,20 @@ body {
     justify-content: center;
     padding: 0.5rem;
     transform: rotateX(-180deg);
+    overflow-y: auto;
   }
   &-group,
   &-name {
     font-size: 1.2rem;
     font-weight: bold;
   }
-  &-group > span {
-    margin-left: 0.5rem;
-    font-size: 1rem;
-    color: $c_gray-dark;
+  &-group {
+    margin-left: 1.8rem;
+    & > span {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+      color: $c_gray-dark;
+    }
   }
   &-text {
     color: $c_gray-dark;
