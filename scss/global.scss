@@ -212,20 +212,25 @@ body {
   &-btn {
     position: relative;
     font-family: $font;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     color: $c_main;
     font-size: 0.8rem;
     font-weight: bold;
     background-color: $c_light;
     text-decoration: none;
-    border: 2px solid $c_main;
-    border-top-color: $c_light;
-    border-bottom-color: $c_light;
+    border: 1px solid $c_main;
     transition: border-color 0.5s;
+    outline: 0.75rem solid $c_light;
     cursor: pointer;
-    &:hover {
-      border-top-color: $c_main;
-      border-bottom-color: $c_main;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -0.75rem;
+      right: -0.75rem;
+      border-left: 2px solid $c_main;
+      border-right: 2px solid $c_main;
     }
   }
   &::before {
