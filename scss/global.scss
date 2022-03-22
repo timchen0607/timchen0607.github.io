@@ -12,6 +12,15 @@ body {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: MIN(0.4rem, 1vw);
+  height: MIN(0.4rem, 1vw);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: $c_main;
+}
+
 .cover {
   background-color: $c_light;
 }
@@ -530,6 +539,7 @@ body {
   &-info {
     position: relative;
     max-width: 1000px;
+    min-height: 550px;
     padding: 1.2rem;
     &::before {
       content: "";
@@ -544,6 +554,7 @@ body {
   }
   &-intro::before {
     background-color: $c_sub;
+    min-height: 1000px;
   }
   &-subTitle {
     padding: 0.5rem 0;
@@ -576,6 +587,7 @@ body {
     letter-spacing: 0.1rem;
   }
   &-info {
+    min-height: auto;
     color: $c_light;
     line-height: 1.5rem;
     & > li > span {
@@ -611,7 +623,8 @@ body {
     }
     &-item {
       width: 48%;
-      padding: 1rem 0;
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
       text-align: center;
       & > i {
         font-size: 2rem;
