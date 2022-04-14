@@ -103,12 +103,12 @@ body {
   &-item {
     position: relative;
     width: 50%;
-    padding: 2rem 3.2rem;
+    padding: 1.5rem 3.2rem;
     border-top: 1px solid $c_gray;
     border-bottom: 1px solid $c_gray;
     box-sizing: border-box;
     @for $i from 1 through 9 {
-      &:nth-child(#{$i})::after {
+      &:nth-of-type(#{$i})::after {
         content: "0" + $i;
         top: 2rem;
         position: absolute;
@@ -122,7 +122,7 @@ body {
         }
       }
     }
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
       margin-left: 50%;
       @include pad {
         padding: 1rem 1rem 1rem 3.2rem;
@@ -137,7 +137,7 @@ body {
         }
       }
     }
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       & > .timeline-icon {
         left: unset;
         right: 0;
@@ -158,6 +158,9 @@ body {
       @include pad {
         padding: 1rem 3.2rem 1rem 1rem;
       }
+    }
+    &:hover .timeline-text {
+      color: $c_dark;
     }
     @include mobile {
       width: 100%;
@@ -193,10 +196,40 @@ body {
     font-size: 1.25rem;
     padding-bottom: 0.5rem;
   }
+  &-intro {
+    position: relative;
+    overflow: hidden;
+    transition: 1s height;
+    padding-bottom: 1rem;
+  }
+  &-introBtn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0.25rem 1rem;
+    color: $c_light;
+    background-color: $c_main;
+    border: none;
+    cursor: pointer;
+    transform: translateX(-50%);
+  }
+  &-introCover {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 0%, $c_light 10%);
+    transition: transform 1s;
+  }
   &-text {
     color: $c_gray_dark;
     line-height: 1.2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    text-align: justify;
+    transition: 0.5s color;
+    & + .timeline-text {
+      margin-top: 0.25rem;
+    }
   }
   &::after {
     content: "";

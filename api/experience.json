@@ -1,7 +1,7 @@
 {
   "works": [
     {
-      "occupation": "助理工程師",
+      "occupation": ["助理工程師"],
       "firm": "眾點資訊有限公司",
       "period": "Oct. 2019 - Jun. 2020",
       "introduce": [

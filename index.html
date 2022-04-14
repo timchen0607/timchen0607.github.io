@@ -326,38 +326,36 @@
     </section>
     <section id="experience" class="cover">
       <h2 class="title">工作經歷<span>EXPERIENCE</span></h2>
-      <ul class="container timeline">
-        <li class="timeline-item">
-          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
-          <h3 class="timeline-title">助理工程師</h3>
-          <h4 class="timeline-subTitle">眾點資訊有限公司</h4>
-          <p class="timeline-text">Oct 2019 - Jun 2020</p>
-          <p class="timeline-text">負責開發公司商品購物網站。</p>
-          <p class="timeline-text">協助維護與重構公司原有路跑活動報名系統。</p>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
-          <h3 class="timeline-title">獨自接案－<br />在地保養品購物網站</h3>
-          <h4 class="timeline-subTitle">康仕儷保養品</h4>
-          <p class="timeline-text">Jul 2019 - Jan 2020</p>
-          <p class="timeline-text">
-            替該公司開發保養品購物網站前後台，取代原先表單。
-          </p>
-          <p class="timeline-text">
-            該網站亦整合其合作店家的進貨表單，並提供優惠積點機制。
-          </p>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
-          <h3 class="timeline-title">校園授權軟體授權專區</h3>
-          <h4 class="timeline-subTitle">國立虎尾科技大學</h4>
-          <p class="timeline-text">Jun 2016 - Jan 2019</p>
-          <p class="timeline-text">
-            協助開發校園授權軟體下載專區，取代舊版介面。
-          </p>
-          <p class="timeline-text">協助維修及解決教職員生電腦問題。</p>
-        </li>
-      </ul>
+      <template x-if="worksExp">
+        <ul class="container timeline">
+          <template x-for="(item,idx) in worksExp">
+            <li class="timeline-item">
+              <div class="timeline-icon"><i class="icofont-bag-alt"></i></div>
+              <template x-for="str in item.occupation">
+                <h3 class="timeline-title" x-text="str"></h3>
+              </template>
+              <h4 class="timeline-subTitle" x-text="item.firm"></h4>
+              <p class="timeline-text" x-text="item.period"></p>
+              <div class="timeline-intro worksExp">
+                <template x-for="str in item.introduce">
+                  <p class="timeline-text" x-text="str"></p>
+                </template>
+                <div class="timeline-introCover worksExp"></div>
+                <template x-if="!item.show">
+                  <button class="timeline-introBtn" @click="toggleIntro(idx)">
+                    More
+                  </button>
+                </template>
+                <template x-if="item.show">
+                  <button class="timeline-introBtn" @click="toggleIntro(idx)">
+                    Hide
+                  </button>
+                </template>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </template>
     </section>
     <section id="certificate" class="certificate cover">
       <h2 class="title">證照<span>CERTIFICATE</span></h2>

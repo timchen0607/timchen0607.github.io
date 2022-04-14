@@ -6,6 +6,8 @@ document.addEventListener("alpine:init", () => {
       this.skills = [];
       this.finCert = [];
       this.techCert = [];
+      this.worksExp = [];
+      this.OthersExp = [];
       this.blogs = [];
       this.profileIdx = 0;
       this.portfolioIdx = 1;
@@ -17,10 +19,12 @@ document.addEventListener("alpine:init", () => {
       this.fetchProfile()
         .then(() => this.fetchPortfolio())
         .then(() => this.fetchSkills())
+        .then(() => this.fetchExperience())
         .then(() => this.fetchCertificate())
         .then(() => this.fetchBlogs())
         .then(() => {
           this.autoActive();
+          this.processIntro();
           this.skillsParallax();
           document.addEventListener("scroll", () => this.autoActive());
           document.documentElement.style.overflow = "visible";
@@ -54,6 +58,14 @@ document.addEventListener("alpine:init", () => {
         .then((res) => res.json())
         .then((json) => (this.skills = json));
     },
+    fetchExperience() {
+      return fetch("https://timchen0607.github.io/api/experience.json")
+        .then((res) => res.json())
+        .then((json) => {
+          this.worksExp = json.works;
+          this.OthersExp = json.others;
+        });
+    },
     fetchCertificate() {
       return fetch("https://timchen0607.github.io/api/certificate.json")
         .then((res) => res.json())
@@ -73,6 +85,29 @@ document.addEventListener("alpine:init", () => {
       return fetch("https://timchen0607.github.io/api/blogs.json")
         .then((res) => res.json())
         .then((json) => (this.blogs = json));
+    },
+    processIntro() {
+      this.worksExp.map((x) => (x.show = false));
+      const intro = this.$el.querySelectorAll(".timeline-intro.worksExp");
+      const cover = this.$el.querySelectorAll(".timeline-introCover.worksExp");
+      intro.forEach((item, idx) => {
+        this.worksExp[idx].clientHeight = item.clientHeight + "px";
+        cover[idx].style.height = item.clientHeight + "px";
+        item.style.height = "3rem";
+      });
+    },
+    toggleIntro(idx) {
+      this.worksExp[idx].show = !this.worksExp[idx].show;
+      const intro = document.querySelectorAll(".timeline-intro.worksExp");
+      const cover = document.querySelectorAll(".timeline-introCover.worksExp");
+      const h = this.worksExp[idx].clientHeight;
+      if (this.worksExp[idx].show) {
+        intro[idx].style.height = h;
+        cover[idx].style.transform = "translateY(" + h + ")";
+      } else {
+        intro[idx].style.height = "2rem";
+        cover[idx].style.transform = "none";
+      }
     },
     skillsParallax() {
       this.$el.onscroll = function myFunction() {
