@@ -53,16 +53,6 @@
       "dateTime": "2017-06-16"
     },
     {
-      "image": "https://timchen0607.github.io/images/certificate/technology/IC3CF.png",
-      "title": "IC3 常用應用軟體認證",
-      "dateTime": "2017-06-16"
-    },
-    {
-      "image": "https://timchen0607.github.io/images/certificate/technology/IC3CF.png",
-      "title": "IC3 計算機概論認證",
-      "dateTime": "2017-06-16"
-    },
-    {
       "image": "https://timchen0607.github.io/images/certificate/technology/IC3KA.png",
       "title": "IC3 常用應用軟體認證",
       "dateTime": "2017-06-16"
@@ -70,6 +60,11 @@
     {
       "image": "https://timchen0607.github.io/images/certificate/technology/IC3LO.png",
       "title": "IC3 網路應用與安全認證",
+      "dateTime": "2017-06-16"
+    },
+    {
+      "image": "https://timchen0607.github.io/images/certificate/technology/IC3CF.png",
+      "title": "IC3 計算機概論認證",
       "dateTime": "2017-06-16"
     }
   ]
