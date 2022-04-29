@@ -1,122 +1,26 @@
 {
-  "Finance": [
-    {
-      "name": "投信投顧業務人員",
-      "decs": ["取得投信投顧業務人員資格", "中華民國111年03月19日"]
-    },
-    {
-      "name": "信託業業務員",
-      "decs": ["取得信託業業務員資格", "中華民國110年12月30日"]
-    },
-    {
-      "name": "期貨商業務員",
-      "decs": ["取得期貨商業務員資格", "中華民國110年12月18日"]
-    },
-    {
-      "name": "證券商業務員",
-      "decs": ["取得證券商業務人員資格", "中華民國110年11月27日"]
-    },
-    {
-      "name": "金融市場常識與職業道德",
-      "decs": ["通過金融市場常識與職業道德", "中華民國110年10月23日"]
-    }
-  ],
   "FrontEnd": [
-    {
-      "name": "Vue 3 & Vue 2",
-      "decs": [
-        "能夠熟練使用 Composition API",
-        "能夠熟練使用 Option API",
-        "理解元件的生命週期",
-        "透過 props 傳遞資料"
-      ]
-    },
-    {
-      "name": "Vue Router",
-      "decs": [
-        "能夠透過 Vue Router 建置 SPA 網站",
-        "透過路由守衛（Navigation Guards）控制網站跳轉邏輯"
-      ]
-    },
-    {
-      "name": "Alpine.js",
-      "decs": ["能夠透過 Alpine.js 快速開發由資料驅動的網頁"]
-    },
-    {
-      "name": "JavaScript",
-      "decs": [
-        "熟悉 ES6 語法糖",
-        "熟悉箭頭函式開發方式",
-        "熟悉 Promise 使用方式",
-        "能以原生 JS 操控 DOM 元素"
-      ]
-    },
-    {
-      "name": "SCSS ",
-      "decs": [
-        "熟悉 mixin 使用方式",
-        "熟悉 Variables 使用方式",
-        "熟悉 if/for 使用方式",
-        "熟悉 import 使用方式"
-      ]
-    },
-    {
-      "name": "CSS3",
-      "decs": [
-        "熟悉 animation 與 transition 操作",
-        "熟悉 CSS3 variables 使用方式"
-      ]
-    },
-    {
-      "name": "Bootstrap 5&4",
-      "decs": [
-        "熟悉各種常用 Components、Utilities",
-        "曾使用過與 Vue 相結合之 BootstrapVue",
-        "曾使用過表格外掛套件 Bootstrap Table"
-      ]
-    },
-    {
-      "name": "jQuery 3",
-      "decs": ["能以 jQuery 操作 DOM 元素", "曾以 jQuery 開發過購物網站(前端)"]
-    }
+    "熟悉 HTML5、CSS3、 SCSS、Bootstrap 4,5，可獨立完成切版、設計RWD網頁。",
+    "熟悉 JavaScript ES6 與 jQuery 能熟練操作 DOM 元素、透過 AJAX 取得資料，亦會使用 Promise 建立非同步運算程式，確保程式流程不會發生錯誤。",
+    "會使用 Vue3,2 與 Alpine.js 等前端框架，並熟悉 Vue 的 Composition API 與 Option API 開發模式與兩者撰寫的差異，亦能夠使用 Vue Cli 搭配 Vue Router 獨立開發 SPA 網站。",
+    "介接第三方登入經驗，Facebook、Google、Line 皆曾實做過。",
+    "導入 Google Analytics 與 Facebook Pixel 追蹤使用者行為開發經驗。",
+    "使用 Firebase Authentication 驗證並搭配  Realtime Database 開發多人即時聊天系統。"
   ],
   "BackEnd": [
-    {
-      "name": "Node.js",
-      "decs": [
-        "曾使用 Node.js 建置簡易 Server 服務",
-        "曾使用 __dirname、__filename 操作本地端檔案"
-      ]
-    },
-    {
-      "name": "Express",
-      "decs": ["曾使用 Express 架設 Web API"]
-    },
-    {
-      "name": "PHP",
-      "decs": ["曾使用 PHP 開發購物網站(後端)"]
-    },
-    {
-      "name": "ASP.NET Core",
-      "decs": ["曾使用 .NET Core 開發購物網站(前後端)"]
-    }
+    "使用 ASP.NET Core 3.1 C# 開發購物網站後台經驗。",
+    "使用 ASP.NET MVC 5 C# 維護並改寫活動報名網站與開發活動退費系統經驗。",
+    "使用 Node.js 架設服務與使用 fs module 操作實體檔案經驗。",
+    "碩士論文研究使用 Firebase 雲端資料庫服務開發研究用平台。",
+    "使用 PHP 撰寫保養品購物網站經驗，並串接 MySQL 資料庫進行資料處理。",
+    "曾自學接觸 MongoDB 等 NoSQL 類型資料庫。"
   ],
-  "Others": [
-    {
-      "name": "Line Bot & Line Notify",
-      "decs": [
-        "熟悉建置 Line 機器人與通知之流程",
-        "瞭解如何與 firebase 串接",
-        "曾自製行事曆活動通知功能"
-      ]
-    },
-    {
-      "name": "Python",
-      "decs": [
-        "熟悉 Python 常用語法",
-        "使用過網頁爬蟲套件",
-        "使用過金融相關套件"
-      ]
-    }
+  "LINEBot": [
+    "有使用 Python 開發 Line Bot 服務經驗，自行開發履歷機器人。",
+    "Google 行事曆結合 Line Notify 製作行事曆活動通知服務。"
+  ],
+  "WebScraping": [
+    "透過 BS4, Requests, Selenium 抓取網站資料與股市資訊。",
+    "將這些資料結合 talib 進行技術分析，並使用 matplotlib 產生圖表資訊。"
   ]
 }
