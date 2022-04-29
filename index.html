@@ -193,134 +193,47 @@
       <h2 class="title">專業技能<span>　SKILLS　</span></h2>
       <template x-if="skills">
         <div class="container">
-          <h3 class="skills-group">
-            <i class="icofont-bank"></i> 金融類<span>Finance</span>
-          </h3>
-          <ul class="skills-content">
-            <template x-for="(item,idx) in skills.Finance">
-              <li class="skills-item" x-show="idx < skillsFinanceIdx*4">
-                <div class="skills-front">
-                  <h4 class="skills-name" x-text="item.name"></h4>
-                  <div class="skills-level">
-                    <template x-for="l in item.level">
-                      <i class="icofont-star"></i>
-                    </template>
-                  </div>
-                  <p class="skills-text">點擊觀看說明</p>
-                </div>
-                <div class="skills-back">
-                  <template x-for="d in item.decs">
-                    <p class="skills-decs" x-text="d"></p>
-                  </template>
-                </div>
-              </li>
-            </template>
-          </ul>
-          <template
-            x-if="skills.Finance && skills.Finance.length > skillsFinanceIdx*4"
-          >
-            <div class="showMore">
-              <button class="showMore-btn" @click="skillsFinanceIdx+=1;">
-                SHOW MORE
-              </button>
-            </div>
-          </template>
-          <h3 class="skills-group">
-            <i class="icofont-code-alt"></i> 前端技能<span>FrontEnd</span>
-          </h3>
-          <ul class="skills-content">
-            <template x-for="(item,idx) in skills.FrontEnd">
-              <li class="skills-item" x-show="idx < skillsFrontEndIdx*4">
-                <div class="skills-front">
-                  <h4 class="skills-name" x-text="item.name"></h4>
-                  <div class="skills-level">
-                    <template x-for="l in item.level">
-                      <i class="icofont-star"></i>
-                    </template>
-                  </div>
-                  <p class="skills-text">點擊觀看說明</p>
-                </div>
-                <div class="skills-back">
-                  <template x-for="d in item.decs">
-                    <p class="skills-decs" x-text="d"></p>
-                  </template>
-                </div>
-              </li>
-            </template>
-          </ul>
-          <template
-            x-if="skills.FrontEnd && skills.FrontEnd.length > skillsFrontEndIdx*4"
-          >
-            <div class="showMore">
-              <button class="showMore-btn" @click="skillsFrontEndIdx+=1;">
-                SHOW MORE
-              </button>
-            </div>
-          </template>
-          <h3 class="skills-group">
-            <i class="icofont-code-alt"></i> 後端技能<span>BackEnd</span>
-          </h3>
-          <ul class="skills-content">
-            <template x-for="(item,idx) in skills.BackEnd">
-              <li class="skills-item" x-show="idx < skillsBackEndIdx*4">
-                <div class="skills-front">
-                  <h4 class="skills-name" x-text="item.name"></h4>
-                  <div class="skills-level">
-                    <template x-for="l in item.level">
-                      <i class="icofont-star"></i>
-                    </template>
-                  </div>
-                  <p class="skills-text">點擊觀看說明</p>
-                </div>
-                <div class="skills-back">
-                  <template x-for="d in item.decs">
-                    <p class="skills-decs" x-text="d"></p>
-                  </template>
-                </div>
-              </li>
-            </template>
-          </ul>
-          <template
-            x-if="skills.BackEnd && skills.BackEnd.length > skillsBackEndIdx*4"
-          >
-            <div class="showMore">
-              <button class="showMore-btn" @click="skillsBackEndIdx+=1;">
-                SHOW MORE
-              </button>
-            </div>
-          </template>
-          <h3 class="skills-group">
-            <i class="icofont-stock-mobile"></i> 其他技能<span>Others</span>
-          </h3>
-          <ul class="skills-content">
-            <template x-for="(item,idx) in skills.Others">
-              <li class="skills-item" x-show="idx < skillsOthersIdx*4">
-                <div class="skills-front">
-                  <h4 class="skills-name" x-text="item.name"></h4>
-                  <div class="skills-level">
-                    <template x-for="l in item.level">
-                      <i class="icofont-star"></i>
-                    </template>
-                  </div>
-                  <p class="skills-text">點擊觀看說明</p>
-                </div>
-                <div class="skills-back">
-                  <template x-for="d in item.decs">
-                    <p class="skills-decs" x-text="d"></p>
-                  </template>
-                </div>
-              </li>
-            </template>
-          </ul>
-          <template
-            x-if="skills.Others && skills.Others.length > skillsOthersIdx*4"
-          >
-            <div class="showMore">
-              <button class="showMore-btn" @click="skillsOthersIdx+=1;">
-                SHOW MORE
-              </button>
-            </div>
-          </template>
+          <div class="skills-group">
+            <h3 class="skills-title">
+              <i class="icofont-code-alt"></i> 前端技能<span>FrontEnd</span>
+            </h3>
+            <ol class="skills-content">
+              <template x-for="(item,idx) in skills.FrontEnd">
+                <li x-text="item"></li>
+              </template>
+            </ol>
+          </div>
+          <div class="skills-group">
+            <h3 class="skills-title">
+              <i class="icofont-code-alt"></i> 後端技能<span>BackEnd & DB</span>
+            </h3>
+            <ul class="skills-content">
+              <template x-for="(item,idx) in skills.BackEnd">
+                <li x-text="item"></li>
+              </template>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3 class="skills-title">
+              <i class="icofont-stock-mobile"></i> LINE 生態系
+              <span>Line Bot & Line Notify</span>
+            </h3>
+            <ul class="skills-content">
+              <template x-for="(item,idx) in skills.LINEBot">
+                <li x-text="item"></li>
+              </template>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3 class="skills-title">
+              <i class="icofont-bug"></i> 爬蟲技術<span>WebScraping</span>
+            </h3>
+            <ul class="skills-content">
+              <template x-for="(item,idx) in skills.WebScraping">
+                <li x-text="item"></li>
+              </template>
+            </ul>
+          </div>
         </div>
       </template>
     </section>
